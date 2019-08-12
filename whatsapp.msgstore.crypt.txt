@@ -1,0 +1,1 @@
+openssl enc -d  -aes-192-ecb -in msgstore-input.db.crypt -out msgstore-output.db.sqlite -K 346a23652a46392b4d73257c67317e352e3372482177652c
