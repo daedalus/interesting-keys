@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.psdevwiki.com/ps4/Crypto_/_DRM -->
+<html class="client-js" lang="en-GB" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Crypto / DRM - PS4 Developer wiki</title>
+<script async="" src="./PS4_drmhtml_files/analytics.js"></script><script src="./PS4_drmhtml_files/osd.js"></script><script src="./PS4_drmhtml_files/f(5).txt" id="google_shimpl"></script><script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Crypto_/_DRM","wgTitle":"Crypto / DRM","wgCurRevisionId":276486,"wgRevisionId":276486,"wgArticleId":35440,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse Engineering","Main"],"wgBreakFrames":false,"wgPageContentLanguage":"en-gb","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Crypto_/_DRM","wgRelevantArticleId":35440,"wgRequestId":"XRjkC87lbSb-NXhUeLZdagAAAA0","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0qpjoud",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"en-gb"});
+});mw.loader.implement("user.tokens@09zsq4u",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="./PS4_drmhtml_files/load.php">
+<script async="" src="./PS4_drmhtml_files/load(1).php"></script>
+<style>
+.cite-accessibility-label{ top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px); position:absolute !important;padding:0 !important;border:0 !important;height:1px !important;width:1px !important; overflow:hidden}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./PS4_drmhtml_files/load(2).php">
+<meta name="generator" content="MediaWiki 1.31.1">
+<meta name="description" content="Playstation Development Wiki, Hacks, PS3, PS4, PS5 and Development Information">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM">
+<link rel="edit" title="Edit" href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM">
+<link rel="shortcut icon" href="https://www.psdevwiki.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.psdevwiki.com/ps4/opensearch_desc.php" title="PS4 Developer wiki (en-gb)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.psdevwiki.com/ps4/api.php?action=rsd">
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">
+<link rel="alternate" type="application/atom+xml" title="PS4 Developer wiki Atom feed" href="https://www.psdevwiki.com/ps4/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/ps4/load.php?debug=false&amp;lang=en-gb&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="./PS4_drmhtml_files/load(3).php"></script><link rel="preload" href="./PS4_drmhtml_files/f(6).txt" as="script"><script type="text/javascript" src="./PS4_drmhtml_files/f(6).txt"></script><link rel="preload" href="./PS4_drmhtml_files/f(7).txt" as="script"><script type="text/javascript" src="./PS4_drmhtml_files/f(7).txt"></script><link rel="preload" href="./PS4_drmhtml_files/f(5).txt" as="script"></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Crypto_DRM rootpage-Crypto_DRM skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+
+                        <!-- Begin custom skin addition -->
+                        <center>
+
+			<script async="" src="./PS4_drmhtml_files/f(8).txt"></script>
+			<!-- Wiki_Leaderboard -->
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3613141703597295" data-ad-slot="3075174921" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./PS4_drmhtml_files/saved_resource(1).html"></iframe></ins></ins></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+                        </center>
+                        <!-- End custom skin addition -->
+
+
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en-GB">Crypto / DRM</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From PS4 Developer wiki</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#mw-head">navigation</a>, 					<a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en-GB" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><b>Update: AES Content Keys</b>
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en-GB" dir="ltr"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#AES_Content_Keys"><span class="tocnumber">1</span> <span class="toctext">AES Content Keys</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Boot_Signature"><span class="tocnumber">2</span> <span class="toctext">Boot Signature</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Compression_.26_Encryption"><span class="tocnumber">3</span> <span class="toctext">Compression &amp; Encryption</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Registry"><span class="tocnumber">4</span> <span class="toctext">Registry</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#PseudoRandom_Number_Generator"><span class="tocnumber">5</span> <span class="toctext">PseudoRandom Number Generator</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Video_DRM"><span class="tocnumber">6</span> <span class="toctext">Video DRM</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#PlayReady"><span class="tocnumber">6.1</span> <span class="toctext">PlayReady</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Marlin"><span class="tocnumber">6.2</span> <span class="toctext">Marlin</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Advanced_Access_Content_System_.28AACS.29"><span class="tocnumber">6.3</span> <span class="toctext">Advanced Access Content System (AACS)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#AES_encrypted_video"><span class="tocnumber">6.4</span> <span class="toctext">AES encrypted video</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Key_selection_vector_.28KSV.29"><span class="tocnumber">6.5</span> <span class="toctext">Key selection vector (KSV)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Content_Scramble_System_.28CSS.29"><span class="tocnumber">6.6</span> <span class="toctext">Content Scramble System (CSS)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#Cinavia"><span class="tocnumber">6.7</span> <span class="toctext">Cinavia</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="AES_Content_Keys">AES Content Keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=1" title="Edit section: AES Content Keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>84 41 07 03 DA A8 4E 86 AC D4 F4 DF A2 44 1F 37</b>
+</p>
+<h2><span class="mw-headline" id="Boot_Signature">Boot Signature</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=2" title="Edit section: Boot Signature">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>/BOOT/SESS/STRT/bsig=DL_GameDev-0012345-Exampl-Devel-Test1&amp;vers=PG&amp;edtn=0</b>
+</p><p><i><b>(Not posting actual bsig of games or apps to stop this from being fixed before its useful)</b></i>
+</p><p>First 2 bytes of the sig "0012345" are dev specific and dont change when an update or patch is issued.
+</p><p>3rd Byte is predictable based on prior update for the application.
+</p><p><b>/BOOT/SESS/HRDW/mntd=1&amp;knct=0</b>
+</p><p><br>
+(Extra Auth/Boot Signature ID)
+</p><p><i><b>Retail BootSigID Update 1: e9b803</b></i> 
+</p><p><b>dbf4c9a69f7cc46952e9b803</b>
+</p><p><i><b>Retail BootSigID Update 2: f3df56</b></i>
+</p><p><b>dbf4c9a69f7cc46952f3df56</b>
+</p><p><br>
+<b>/BSID/STR0/TLM3/data=dbf4c9a6 (8 Bytes)</b>
+</p><p><b>/BSID/STR1/TLM3/data=9f7cc469 (8 Bytes)</b>
+</p><p><b>/BSID/STR2/TLM3/data=52UPDATE (8 Bytes)</b>
+</p><p><b>Last 6 bytes of /STR2/ change every time a new update or patch is issued. Others stay constant and are app specific.</b>
+</p><p><br>
+<b>/BSID/STR0/STR1/bsid=dbf4c9a69f7cc46952UPDATE (24 Bytes)</b>
+</p><p><br>
+<b>Updates for certain apps and games can be skipped by making the BootSig and the BootSigID match the most recent patch when the check is done. </b>
+</p><p>Note: Some apps also check <i>"minRequiredAppVersion"</i>.
+</p>
+<h2><span id="Compression_&amp;_Encryption"></span><span class="mw-headline" id="Compression_.26_Encryption">Compression &amp; Encryption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=3" title="Edit section: Compression &amp; Encryption">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some games are packaging game updates/script files with lzma. After you decompress the lzma the files you get have an additional layer of encryption.
+</p>
+<h2><span class="mw-headline" id="Registry">Registry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=4" title="Edit section: Registry">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>HardwareId= getRegistry().hardwareId</b>
+</p><p><b>Manufacturing Id= getRegistry().hardwareId:sub(1, 4)</b>
+</p><p><b>Model Id= getRegistry().hardwareId:sub(1, 8)</b>
+</p><p><b>registerStateType(default, cancel, reset)</b>
+</p>
+<h2><span class="mw-headline" id="PseudoRandom_Number_Generator">PseudoRandom Number Generator</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=5" title="Edit section: PseudoRandom Number Generator">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i><b>math.randomseed(Time)</b></i>
+</p><p><i>The Randomseed for software based PRNG is just time, allowing you to predict the seed due to low entropy</i>
+</p><p><sup id="cite_ref-1" class="reference"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#cite_note-1">[1]</a></sup>
+</p>
+ <div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM#cite_ref-1"><span class="cite-accessibility-label">Jump up </span>↑</a></span> <span class="reference-text">The choice of a good random seed is crucial in the field of computer security. When a secret encryption key is pseudo-randomly generated, having the seed will allow one to obtain the key.</span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Video_DRM">Video DRM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=6" title="Edit section: Video DRM">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="PlayReady">PlayReady</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=7" title="Edit section: PlayReady">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/PlayReady">PlayReady DRM</a> (used by PS4/PS3 <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Netflix">Netflix</a> e.g.) - note: 4K is not supported as that would require PlayReady 3.0 
+</p><p>Edit: Netflix and Hulu are supporting 4K on the PS4 Pro apparently without Playready 3 using the same APP with the PS4 Pro in PS4 GPU mode.  The PS4 Intellectual notice does mention Playready and states that the device can be disabled which is embedded Playready greater than 2.5.  Playready 2.5 and lower is in the APP not in a TEE on the PS4.
+</p><p>Apparently all Commercial apps are currently using a 2008 PC Vista model which uses the APU's GPU for codecs. <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://www.anandtech.com/show/2622/2">http://www.anandtech.com/show/2622/2</a>  For security reasons the Codec is also supposed to run in a TEE for Playready 3.  Has Sony implemented a TEE within their custom APU?  
+</p><p>A fail overflow programmer states that Display Port Video exits the APU over a PCIe4 bus to the Custom Panasonic HDMI chip where it is converted to HDMI.  In the 2008 Vista PC model, Video is encrypted on the PCIe bus and HDCP takes place in the GPU not the HDMI chip; this would be necessary for 1080P and 4K video leaving the GPU with the PCIe traces and HDMI pins exposed.
+</p><p>Sony calls all PS4s UHD Capable here <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://efficientgaming.eu/fileadmin/user_upload/SONY__PCR_2016_CUH1116A.pdf">http://efficientgaming.eu/fileadmin/user_upload/SONY__PCR_2016_CUH1116A.pdf</a>   What that means may only be HD + HDR for Games which takes the negotiation of a HDMI 2.0a port.  Or it can also support HD + HDR for commercial media or full UHD.  This would require a TEE with embedded Playready 3 and my guess optimally happens in Southbridge with a path using PCIe4 from Southbridge to HDMI and with full screen video the APU would be off with GDDR5 in Self refresh.  Any need for UI would turn on the APU's GPU.  Games would continue using the APU to HDMI PCIe4 path as that has the least latency.
+</p><p>Cerny stated the PS4 Second custom chip as Southbridge has a Trustzone TEE used for trusted boot and background downloading.  256 Meg DDR3 and 1GB DDR3 for the Pro attached to Southbridge notwithstanding Sony statements probably translates to the 2013/2015/2016 PS4s supporting HD + HDR and the PS4 Pro with 4X the memory supporting 4K commercial media. 
+</p><p>We have no idea what's coming or how Sony is going to implement Playready 3.
+</p>
+<h3><span class="mw-headline" id="Marlin">Marlin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=8" title="Edit section: Marlin">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Marlin_%28DRM%29">Marlin DRM</a> (used by PS4/PS3/PSP)
+</p>
+<h3><span id="Advanced_Access_Content_System_(AACS)"></span><span class="mw-headline" id="Advanced_Access_Content_System_.28AACS.29">Advanced Access Content System (AACS)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=9" title="Edit section: Advanced Access Content System (AACS)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Advanced_Access_Content_System">AACS</a> (used by BluRay Video / BD]
+</p>
+<h3><span class="mw-headline" id="AES_encrypted_video">AES encrypted video</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=10" title="Edit section: AES encrypted video">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>-128 (used for <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.unified-streaming.com/support/documentation/drm-packaging/hls-aes-encryption/">Live Streaming</a>?)
+</p><p>AMD64 has <a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/AES_instruction_set">AES-NI</a> support
+</p>
+<h3><span id="Key_selection_vector_(KSV)"></span><span class="mw-headline" id="Key_selection_vector_.28KSV.29">Key selection vector (KSV)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=11" title="Edit section: Key selection vector (KSV)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Key_selection_vector">KSV</a> (used by <a href="https://www.psdevwiki.com/ps4/HDCP" title="HDCP">HDCP</a>)
+</p>
+<h3><span id="Content_Scramble_System_(CSS)"></span><span class="mw-headline" id="Content_Scramble_System_.28CSS.29">Content Scramble System (CSS)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=12" title="Edit section: Content Scramble System (CSS)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://en.wikipedia.org/wiki/Content_Scramble_System">CSS</a> (used by DVD-Video)
+</p>
+<h3><span class="mw-headline" id="Cinavia">Cinavia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM?section=13" title="Edit section: Cinavia">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="https://en.wikipedia.org/wiki/Cinavia">Cinavia</a> - in short terms, PS4 has Cinavia built-in the <a href="https://www.psdevwiki.com/ps4/System_Firmware" title="System Firmware">System Firmware</a>. Message Code 3 = CE-37960-5
+</p><p><br>
+</p>
+<table class="navbox" cellspacing="0" style=";"><tbody><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible uncollapsed" style="width:100%;background:transparent;color:inherit;;"><tbody><tr><th scope="col" style=";" class="navbox-title" colspan="3"><div class="noprint plainlinks hlist navbar" style=""><ul><li class="nv-view"><a href="https://www.psdevwiki.com/ps4/Template:Reverse_Engineering" title="Template:Reverse Engineering"><span style=";;background:none transparent;border:none;" title="View this template">v</span></a></li><li class="nv-edit"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.psdevwiki.com/ps4/edit/Template:Reverse_Engineering"><span style=";;background:none transparent;border:none;" title="Edit this template">e</span></a></li></ul></div><div class="" style="font-size:110%;">
+<a href="https://www.psdevwiki.com/ps4/Reverse_Engineering" title="Reverse Engineering">Reverse Engineering</a></div></th></tr><tr style="height:2px;"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;"><a href="https://www.psdevwiki.com/ps4/Reverse_Engineering" title="Reverse Engineering">Reverse Engineering</a></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps4/Bootprocess" title="Bootprocess">Bootprocess</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Disc_Identification/Serialization_Data" title="Disc Identification/Serialization Data">Disc Identification/Serialization Data</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Files_on_the_PS4" title="Files on the PS4">Files on the PS4</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Libraries" title="Libraries">Libraries</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Syscalls" title="Syscalls">Syscalls</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Savegames" title="Savegames">Savegames</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Kernel_Patches" title="Kernel Patches">Kernel Patches</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/Sealedkey_/_pfsSKKey" title="Sealedkey / pfsSKKey">sealedkey / pfsSKKey</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/VTRM" title="VTRM">VTRM</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td><td class="navbox-image" style="width:0%;padding:0px 0px 0px 2px;" rowspan="11"><div>
+<img alt="" src="./PS4_drmhtml_files/50px-Reverse_Engineering.png" width="50" height="50" srcset="/ps4/images/thumb/2/2e/Reverse_Engineering.png/75px-Reverse_Engineering.png 1.5x, /ps4/images/2/2e/Reverse_Engineering.png 2x"></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Dumps &amp; Strings</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">Dumps</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps4/Flash-Bridge" title="Flash-Bridge">Flash-Bridge</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Flash-Hub" title="Flash-Hub">Flash-Hub</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Flash-Main" title="Flash-Main">Flash-Main</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">Strings</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps4/Flash-Bridge/strings" title="Flash-Bridge/strings">Flash-Bridge/strings</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Flash-Hub/strings" title="Flash-Hub/strings">Flash-Hub/strings</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Flash-Main/strings" title="Flash-Main/strings">Flash-Main/strings</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Communication</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">USB</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps4/PS4cam-USB" title="PS4cam-USB">PS4cam-USB</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/DS4-USB" title="DS4-USB">DS4-USB</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;"><a href="https://www.psdevwiki.com/ps4/Bluetooth" title="Bluetooth">Bluetooth</a></div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps4/DS4-BT" title="DS4-BT">DS4-BT</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Audio-BT" title="Audio-BT">Audio-BT</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">Wifi/LAN</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps4/Online_Connections" title="Online Connections">Online Connections</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;"><a href="https://www.psdevwiki.com/ps4/Exploit_Exploration" title="Exploit Exploration">Exploit Exploration</a></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps4/Bugs_%26_Vulnerabilities" title="Bugs &amp; Vulnerabilities">Bugs &amp; Vulnerabilities</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Proof_of_Concepts" title="Proof of Concepts">Proof of Concepts</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Working_Exploits" title="Working Exploits">Working Exploits</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Keys &amp; Digests</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps4/Activation_AFV" title="Activation AFV">Activation AFV</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Activation_ACF" title="Activation ACF">Activation ACF</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Bruteforcing" title="Bruteforcing">Bruteforcing</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a class="mw-selflink selflink">Crypto / DRM</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Keys" title="Keys">Keys</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp; <a href="https://www.psdevwiki.com/ps4/Digests" title="Digests">Digests</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;</div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;"><a href="https://www.psdevwiki.com/ps4/Emulation" title="Emulation">Emulation</a></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps4/PS2_Emulation" title="PS2 Emulation">PS2 Emulation</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/PS2_Classics_Emulator_Compatibility_List" title="PS2 Classics Emulator Compatibility List">PS2 Classics Emulator Compatibility List</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/PSP_Emulation" title="PSP Emulation">PSP Emulation</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/PSP_Emulator_Compatibility_List" title="PSP Emulator Compatibility List">PSP Emulator Compatibility List</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/PS3_Emulation" title="PS3 Emulation">PS3 Emulation</a>&nbsp; <span style="font-weight:bold;">·</span> &nbsp;<a href="https://www.psdevwiki.com/ps4/PS3_Emulator_Compatibility_List" title="PS3 Emulator Compatibility List">PS3 Emulator Compatibility List</a></div></td></tr></tbody></table></td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20190630163212
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.241 seconds
+Real time usage: 0.252 seconds
+Preprocessor visited node count: 1395/1000000
+Preprocessor generated node count: 9713/1000000
+Post‐expand include size: 37734/2097152 bytes
+Template argument size: 21935/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 469/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+131.97%  163.006      3 Template:Navbox
+100.00%  123.520      1 Template:Reverse_Engineering
+100.00%  123.520      1 -total
+ 41.97%   51.842      2 Template:Navbox_subgroup
+ 12.13%   14.986      1 Template:Navbar
+  5.81%    7.172      2 Template:Transclude
+  4.05%    4.999     34 Template:Widedot
+-->
+</div>
+<!-- Saved in parser cache with key psdevwiki_ps4:pcache:idhash:35440-0!canonical and timestamp 20190630163211 and revision id 276486
+ -->
+</div>					<div class="printfooter">
+						Retrieved from ‘<a dir="ltr" href="http://www.psdevwiki.com/ps4/index.php?title=Crypto_/_DRM&amp;oldid=276486">http://www.psdevwiki.com/ps4/index.php?title=Crypto_/_DRM&amp;oldid=276486</a>’					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.psdevwiki.com/ps4/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://www.psdevwiki.com/ps4/Category:Reverse_Engineering" title="Category:Reverse Engineering">Reverse Engineering</a></li><li><a href="https://www.psdevwiki.com/ps4/Category:Main" title="Category:Main">Main</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="https://www.psdevwiki.com/ps4/Special:MyTalk" title="Discussion about edits from this IP address [alt-shift-n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="https://www.psdevwiki.com/ps4/Special:MyContributions" title="A list of edits made from this IP address [alt-shift-y]" accesskey="y">Contributions</a></li><li id="pt-login"><a href="https://www.psdevwiki.com/ps4/index.php?title=Special:UserLogin&amp;returnto=Crypto+%2F+DRM" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="https://www.psdevwiki.com/ps4/Special:RequestAccount" title="You are encouraged to create an account and log in; however, it is not mandatory">Request account</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="https://www.psdevwiki.com/ps4/Talk:Crypto_/_DRM" rel="discussion" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.psdevwiki.com/ps4/Crypto_/_DRM">Read</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.psdevwiki.com/ps4/edit/Crypto_/_DRM" title="Edit this page [alt-shift-e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.psdevwiki.com/ps4/history/Crypto_/_DRM" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://www.psdevwiki.com/ps4/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search PS4 Developer wiki" title="Search PS4 Developer wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.psdevwiki.com/ps4/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-PS_devwiki_ring" aria-labelledby="p-PS_devwiki_ring-label">
+			<h3 id="p-PS_devwiki_ring-label">PS devwiki ring</h3>
+			<div class="body">
+								<ul>
+					<li id="n-PS4-devwiki"><a href="http://www.psdevwiki.com/ps4/" rel="nofollow" target="_blank">PS4 devwiki</a></li><li id="n-PS3-devwiki"><a href="http://www.psdevwiki.com/ps3/" rel="nofollow" target="_blank">PS3 devwiki</a></li><li id="n-PSVita-devwiki"><a href="http://www.vitadevwiki.com/" rel="nofollow" target="_blank">PSVita devwiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.psdevwiki.com/ps4/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li><li id="n-Downloads"><a href="http://www.psdevwiki.com/ps4/files/" rel="nofollow" target="_blank">Downloads</a></li><li id="n-portal"><a href="https://www.psdevwiki.com/ps4/PS4_Developer_wiki:Community_portal" title="About the project, what you can do, and where to find things">Community portal</a></li><li id="n-currentevents"><a href="https://www.psdevwiki.com/ps4/PS4_Developer_wiki:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges"><a href="https://www.psdevwiki.com/ps4/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="https://www.psdevwiki.com/ps4/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li><li id="n-All-Pages"><a href="https://www.psdevwiki.com/ps4/Special:AllPages">All Pages</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" target="_blank" title="The place to find out">Help</a></li><li id="n-Donate"><a href="https://www.psdevwiki.com/ps4/Donations">Donate</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.psdevwiki.com/ps4/Special:WhatLinksHere/Crypto_/_DRM" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://www.psdevwiki.com/ps4/Special:RecentChangesLinked/Crypto_/_DRM" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://www.psdevwiki.com/ps4/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://www.psdevwiki.com/ps4/index.php?title=Crypto_/_DRM&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://www.psdevwiki.com/ps4/index.php?title=Crypto_/_DRM&amp;oldid=276486" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://www.psdevwiki.com/ps4/index.php?title=Crypto_/_DRM&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last modified on 24 February 2017, at 10:26.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.psdevwiki.com/ps4/PS4_Developer_wiki:Privacy_policy" title="PS4 Developer wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://www.psdevwiki.com/ps4/PS4_Developer_wiki:About" title="PS4 Developer wiki:About">About PS4 Developer wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.psdevwiki.com/ps4/PS4_Developer_wiki:General_disclaimer" title="PS4 Developer wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt" target="_blank"><img src="./PS4_drmhtml_files/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31"></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/" target="_blank"><img src="./PS4_drmhtml_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/ps4/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /ps4/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.241","walltime":"0.252","ppvisitednodes":{"value":1395,"limit":1000000},"ppgeneratednodes":{"value":9713,"limit":1000000},"postexpandincludesize":{"value":37734,"limit":2097152},"templateargumentsize":{"value":21935,"limit":2097152},"expansiondepth":{"value":14,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":469,"limit":5000000},"timingprofile":["131.97%  163.006      3 Template:Navbox","100.00%  123.520      1 Template:Reverse_Engineering","100.00%  123.520      1 -total"," 41.97%   51.842      2 Template:Navbox_subgroup"," 12.13%   14.986      1 Template:Navbar","  5.81%    7.172      2 Template:Transclude","  4.05%    4.999     34 Template:Widedot"]},"cachereport":{"timestamp":"20190630163212","ttl":2592000,"transientcontent":false}}});});</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-127383156-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":380});});</script>
+	
+<!-- Cached 20190630163212 -->
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./PS4_drmhtml_files/saved_resource(2).html"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_3930217049241" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./PS4_drmhtml_files/saved_resource(3).html"></iframe><div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body><iframe id="google_esf" name="google_esf" src="./PS4_drmhtml_files/zrt_lookup.html" data-ad-client="ca-pub-3613141703597295" style="display: none;"></iframe></html>

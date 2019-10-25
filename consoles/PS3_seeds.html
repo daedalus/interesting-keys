@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://www.psdevwiki.com/ps3/Seeds -->
+<html class="client-js" lang="en-GB" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Seeds - PS3 Developer wiki</title>
+<script src="./PS3_seeds_files/osd.js"></script><script src="./PS3_seeds_files/f(5).txt" id="google_shimpl"></script><script async="" src="./PS3_seeds_files/analytics.js"></script><script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Seeds","wgTitle":"Seeds","wgCurRevisionId":54542,"wgRevisionId":54542,"wgArticleId":2051,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Reverse engineering","Main"],"wgBreakFrames":false,"wgPageContentLanguage":"en-gb","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Seeds","wgRelevantArticleId":2051,"wgRequestId":"XYZ@N9bR5UJ6lRDlduuaWgAAAAM","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[],"wgPostEdit":"saved"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0qpjoud",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"en-gb"});
+});mw.loader.implement("user.tokens@09zsq4u",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="./PS3_seeds_files/load.php">
+<script async="" src="./PS3_seeds_files/load(1).php"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}
+.mw-notification-area{position:absolute}.mw-notification-area-floating{position:fixed}.mw-notification-area{top:0;right:0; padding:1em;width:20em;line-height:1.35;z-index:10000; overflow:hidden}.mw-notification{padding:0.75em 1.5em;margin-bottom:0.5em;border:solid 1px #ddd;background-color:#fff; cursor:pointer;opacity:0;-webkit-transform:translateX(35px);transform:translateX(35px);-webkit-transition:opacity 0.35s ease-in-out,-webkit-transform 0.35s ease-in-out;transition:opacity 0.35s ease-in-out,transform 0.35s ease-in-out}.mw-notification-visible{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}.mw-notification-replaced{opacity:0;-webkit-transform:translateY(-35px);transform:translateY(-35px);pointer-events:none}.mw-notification-title{font-weight:bold}.mw-notification.mw-notification-type-warn{border-color:#f5be00; background-color:#ffffe8}.mw-notification.mw-notification-type-error{border-color:#eb3941; background-color:#fff8f8}    .mw-notification-area{font-size:0.8em}.mw-notification-area-layout{top:7em}.mw-notification{border:1px solid #a2a9b1;border-radius:2px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.25)}
+@media print {
+	.mw-notification-area{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:14px;cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;line-height:1.35;opacity:1;-webkit-transition:opacity 250ms;-moz-transition:opacity 250ms;transition:opacity 250ms}.postedit:after{content:'';background:no-repeat center center;background-image:url(/ps3/resources/src/mediawiki.action/images/close.png?108ce);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Cpath d=%22M3.636 2.222l14.142 14.142-1.414 1.414L2.222 3.636z%22/%3E %3Cpath d=%22M17.778 3.636L3.636 17.778l-1.414-1.414L16.364 2.222z%22/%3E %3C/svg%3E");background-size:12px 12px;position:absolute;right:0.4em;top:0;bottom:0;min-width:32px;min-height:32px;opacity:0.87}.postedit:after:hover{opacity:1}.postedit.mw-notification{padding-right:3em}.postedit-faded{opacity:0}.postedit-icon{padding-left:25px; line-height:25px;background-repeat:no-repeat}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(/ps3/resources/src/mediawiki.action/images/green-checkmark.png?d94f1)!ie; background-position:left}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./PS3_seeds_files/load(2).php">
+<meta name="generator" content="MediaWiki 1.31.1">
+<meta name="description" content="Playstation Development Wiki, Hacks, PS3, PS4, PS5 and Development Information">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="https://www.psdevwiki.com/ps3/edit/Seeds">
+<link rel="edit" title="Edit" href="https://www.psdevwiki.com/ps3/edit/Seeds">
+<link rel="shortcut icon" href="https://www.psdevwiki.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.psdevwiki.com/ps3/opensearch_desc.php" title="PS3 Developer wiki (en-gb)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.psdevwiki.com/ps3/api.php?action=rsd">
+<link rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">
+<link rel="alternate" type="application/atom+xml" title="PS3 Developer wiki Atom feed" href="https://www.psdevwiki.com/ps3/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/ps3/load.php?debug=false&amp;lang=en-gb&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="./PS3_seeds_files/load(3).php"></script><link rel="preload" href="./PS3_seeds_files/f(6).txt" as="script"><script type="text/javascript" src="./PS3_seeds_files/f(6).txt"></script><link rel="preload" href="./PS3_seeds_files/f(7).txt" as="script"><script type="text/javascript" src="./PS3_seeds_files/f(7).txt"></script><link rel="preload" href="./PS3_seeds_files/f(5).txt" as="script"></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Seeds rootpage-Seeds skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main"><div id="mw-notification-area" class="mw-notification-area mw-notification-area-floating" style="display: none;"></div>
+			<a id="top"></a>
+
+
+                        <!-- Begin custom skin addition -->
+                        <center>
+
+			<script async="" src="./PS3_seeds_files/f(8).txt"></script>
+			<!-- Wiki_Leaderboard -->
+			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3613141703597295" data-ad-slot="3075174921" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./PS3_seeds_files/saved_resource(1).html"></iframe></ins></ins></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+                        </center>
+                        <!-- End custom skin addition -->
+
+
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en-GB">Seeds</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From PS3 Developer wiki</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="https://www.psdevwiki.com/ps3/Seeds#mw-head">navigation</a>, 					<a href="https://www.psdevwiki.com/ps3/Seeds#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en-GB" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en-GB" dir="ltr"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://www.psdevwiki.com/ps3/Seeds#Information_about_these_seeds"><span class="tocnumber">1</span> <span class="toctext">Information about these seeds</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="https://www.psdevwiki.com/ps3/Seeds#Common"><span class="tocnumber">1.1</span> <span class="toctext">Common</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="https://www.psdevwiki.com/ps3/Seeds#Common_individuals_seed"><span class="tocnumber">1.1.1</span> <span class="toctext">Common individuals seed</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-4"><a href="https://www.psdevwiki.com/ps3/Seeds#eEID"><span class="tocnumber">1.2</span> <span class="toctext">eEID</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0"><span class="tocnumber">1.2.1</span> <span class="toctext">eid0</span></a>
+<ul>
+<li class="toclevel-4 tocsection-6"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0_individuals_seed"><span class="tocnumber">1.2.1.1</span> <span class="toctext">eid0 individuals seed</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0_keyseed_0x0"><span class="tocnumber">1.2.1.2</span> <span class="toctext">eid0 keyseed 0x0</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0_keyseed_0x6"><span class="tocnumber">1.2.1.3</span> <span class="toctext">eid0 keyseed 0x6</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0_keyseed_0x6_for_perconsole_encrypted_private_key"><span class="tocnumber">1.2.1.4</span> <span class="toctext">eid0 keyseed 0x6 for perconsole encrypted private key</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="https://www.psdevwiki.com/ps3/Seeds#eid0_keyseed_0xA"><span class="tocnumber">1.2.1.5</span> <span class="toctext">eid0 keyseed 0xA</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-11"><a href="https://www.psdevwiki.com/ps3/Seeds#eid1"><span class="tocnumber">1.2.2</span> <span class="toctext">eid1</span></a>
+<ul>
+<li class="toclevel-4 tocsection-12"><a href="https://www.psdevwiki.com/ps3/Seeds#eid1_individuals_seed"><span class="tocnumber">1.2.2.1</span> <span class="toctext">eid1 individuals seed</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="https://www.psdevwiki.com/ps3/Seeds#eid1_individuals_seed_2"><span class="tocnumber">1.2.2.2</span> <span class="toctext">eid1 individuals seed</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="https://www.psdevwiki.com/ps3/Seeds#time_eid1_keyseed"><span class="tocnumber">1.2.2.3</span> <span class="toctext">time eid1 keyseed</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-15"><a href="https://www.psdevwiki.com/ps3/Seeds#eid2"><span class="tocnumber">1.2.3</span> <span class="toctext">eid2</span></a>
+<ul>
+<li class="toclevel-4 tocsection-16"><a href="https://www.psdevwiki.com/ps3/Seeds#eid2_individuals_seed"><span class="tocnumber">1.2.3.1</span> <span class="toctext">eid2 individuals seed</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="https://www.psdevwiki.com/ps3/Seeds#eid2_DES_key"><span class="tocnumber">1.2.3.2</span> <span class="toctext">eid2 DES key</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="https://www.psdevwiki.com/ps3/Seeds#eid2_DES_iv"><span class="tocnumber">1.2.3.3</span> <span class="toctext">eid2 DES iv</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-19"><a href="https://www.psdevwiki.com/ps3/Seeds#eid3"><span class="tocnumber">1.2.4</span> <span class="toctext">eid3</span></a>
+<ul>
+<li class="toclevel-4 tocsection-20"><a href="https://www.psdevwiki.com/ps3/Seeds#eid3_individuals_seed"><span class="tocnumber">1.2.4.1</span> <span class="toctext">eid3 individuals seed</span></a></li>
+<li class="toclevel-4 tocsection-21"><a href="https://www.psdevwiki.com/ps3/Seeds#eid3_keyseed"><span class="tocnumber">1.2.4.2</span> <span class="toctext">eid3 keyseed</span></a></li>
+<li class="toclevel-4 tocsection-22"><a href="https://www.psdevwiki.com/ps3/Seeds#eid3_static_key"><span class="tocnumber">1.2.4.3</span> <span class="toctext">eid3 static key</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-23"><a href="https://www.psdevwiki.com/ps3/Seeds#eid4"><span class="tocnumber">1.2.5</span> <span class="toctext">eid4</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="https://www.psdevwiki.com/ps3/Seeds#eid4_individuals_seed"><span class="tocnumber">1.2.5.1</span> <span class="toctext">eid4 individuals seed</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="https://www.psdevwiki.com/ps3/Seeds#HDD_Specific"><span class="tocnumber">1.3</span> <span class="toctext">HDD Specific</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="https://www.psdevwiki.com/ps3/Seeds#ATA_data_individuals_seed"><span class="tocnumber">1.3.1</span> <span class="toctext">ATA data individuals seed</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="https://www.psdevwiki.com/ps3/Seeds#ATA_tweak_individuals_seed"><span class="tocnumber">1.3.2</span> <span class="toctext">ATA tweak individuals seed</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="https://www.psdevwiki.com/ps3/Seeds#ENCDEC_data_individuals_seed"><span class="tocnumber">1.3.3</span> <span class="toctext">ENCDEC data individuals seed</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="https://www.psdevwiki.com/ps3/Seeds#ENCDEC_tweak_individuals_seed"><span class="tocnumber">1.3.4</span> <span class="toctext">ENCDEC tweak individuals seed</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="https://www.psdevwiki.com/ps3/Seeds#Arcade.2FSYSDBG_Seeds"><span class="tocnumber">1.3.5</span> <span class="toctext">Arcade/SYSDBG Seeds</span></a>
+<ul>
+<li class="toclevel-4 tocsection-31"><a href="https://www.psdevwiki.com/ps3/Seeds#ATA_data.2Ftweak"><span class="tocnumber">1.3.5.1</span> <span class="toctext">ATA data/tweak</span></a></li>
+<li class="toclevel-4 tocsection-32"><a href="https://www.psdevwiki.com/ps3/Seeds#ENCDEC_data"><span class="tocnumber">1.3.5.2</span> <span class="toctext">ENCDEC data</span></a></li>
+<li class="toclevel-4 tocsection-33"><a href="https://www.psdevwiki.com/ps3/Seeds#ENCDEC_tweak"><span class="tocnumber">1.3.5.3</span> <span class="toctext">ENCDEC tweak</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="https://www.psdevwiki.com/ps3/Seeds#PS2_Emu_Specific"><span class="tocnumber">1.4</span> <span class="toctext">PS2 Emu Specific</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="https://www.psdevwiki.com/ps3/Seeds#mc_iso_individuals_seed"><span class="tocnumber">1.4.1</span> <span class="toctext">mc_iso individuals seed</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="https://www.psdevwiki.com/ps3/Seeds#me_iso_individuals_seed"><span class="tocnumber">1.4.2</span> <span class="toctext">me_iso individuals seed</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="https://www.psdevwiki.com/ps3/Seeds#Syscon_Specific"><span class="tocnumber">1.5</span> <span class="toctext">Syscon Specific</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="https://www.psdevwiki.com/ps3/Seeds#sc_iso_module_seed"><span class="tocnumber">1.5.1</span> <span class="toctext">sc_iso module seed</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="https://www.psdevwiki.com/ps3/Seeds#sc_iso_module_seed_SD"><span class="tocnumber">1.5.2</span> <span class="toctext">sc_iso module seed <span><span>&nbsp;SD&nbsp;</span></span></span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="https://www.psdevwiki.com/ps3/Seeds#sc_magic::auth_magic"><span class="tocnumber">1.5.3</span> <span class="toctext">sc_magic::auth_magic</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="https://www.psdevwiki.com/ps3/Seeds#secure_com_lib_internal_key::session_key_create_key"><span class="tocnumber">1.5.4</span> <span class="toctext">secure_com_lib_internal_key::session_key_create_key</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="https://www.psdevwiki.com/ps3/Seeds#secure_com_lib_internal_key::time_key"><span class="tocnumber">1.5.5</span> <span class="toctext">secure_com_lib_internal_key::time_key</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="https://www.psdevwiki.com/ps3/Seeds#random_xseed"><span class="tocnumber">1.5.6</span> <span class="toctext">random xseed</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="https://www.psdevwiki.com/ps3/Seeds#data_key_seed"><span class="tocnumber">1.5.7</span> <span class="toctext">data key seed</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="https://www.psdevwiki.com/ps3/Seeds#tweak_key_seed"><span class="tocnumber">1.5.8</span> <span class="toctext">tweak key seed</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="https://www.psdevwiki.com/ps3/Seeds#vtrm_keyseed"><span class="tocnumber">1.5.9</span> <span class="toctext">vtrm keyseed</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="https://www.psdevwiki.com/ps3/Seeds#seed_for_backup"><span class="tocnumber">1.5.10</span> <span class="toctext">seed for backup</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="https://www.psdevwiki.com/ps3/Seeds#eEID1_fallback"><span class="tocnumber">1.5.11</span> <span class="toctext">eEID1 fallback</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-49"><a href="https://www.psdevwiki.com/ps3/Seeds#eEID1_fallback_decrypted"><span class="tocnumber">1.6</span> <span class="toctext">eEID1 fallback decrypted</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-50"><a href="https://www.psdevwiki.com/ps3/Seeds#Notes"><span class="tocnumber">2</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="https://www.psdevwiki.com/ps3/Seeds#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="https://www.psdevwiki.com/ps3/Seeds#What.27s_inside:"><span class="tocnumber">4</span> <span class="toctext">What's inside:</span></a>
+<ul>
+<li class="toclevel-2 tocsection-53"><a href="https://www.psdevwiki.com/ps3/Seeds#Each_EID0_Section_.280xC0_bytes.29"><span class="tocnumber">4.1</span> <span class="toctext">Each EID0 Section (0xC0 bytes)</span></a></li>
+<li class="toclevel-2 tocsection-54"><a href="https://www.psdevwiki.com/ps3/Seeds#KeySlots_at_SYSCON"><span class="tocnumber">4.2</span> <span class="toctext">KeySlots at SYSCON</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="https://www.psdevwiki.com/ps3/Seeds#EID1_.280x2A0_bytes.29"><span class="tocnumber">4.3</span> <span class="toctext">EID1 (0x2A0 bytes)</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="https://www.psdevwiki.com/ps3/Seeds#EID2.280x730_bytes.29"><span class="tocnumber">4.4</span> <span class="toctext">EID2(0x730 bytes)</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="https://www.psdevwiki.com/ps3/Seeds#EID3.280x100.29"><span class="tocnumber">4.5</span> <span class="toctext">EID3(0x100)</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="https://www.psdevwiki.com/ps3/Seeds#EID4.280x30.29"><span class="tocnumber">4.6</span> <span class="toctext">EID4(0x30)</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="https://www.psdevwiki.com/ps3/Seeds#EID5_.280xA00.29"><span class="tocnumber">4.7</span> <span class="toctext">EID5 (0xA00)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Information_about_these_seeds">Information about these seeds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=1" title="Edit section: Information about these seeds">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>The seeds present on this wiki page were acquired through different means. It started with a simple search (Which i have to thank glevand and naehrwert for, as had it not been for those guys, i wouldn't have found myself the confidence to post this) and it went through several people who helped me along the way, and that probably wish to stay anonymous.
+</p><p>Without further ado, here are the seeds (both known and unknown) for several functions of the ps3.
+</p>
+<h2><span class="mw-headline" id="Common">Common</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=2" title="Edit section: Common">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Common_individuals_seed">Common individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=3" title="Edit section: Common individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>59302145AC09B1EFE69E9B7A25FF8F86
+E9F6814D37DE204D29729B8416BAEDE4
+227098657F298CDB6A9B5E59E4A4BA2F
+8E6A740E1FC1E3E935DDD2F66CDEDD6B
+</pre>
+<p>Used on old firmwares, possible for an old EID0 format (or fallback?) which can be 0x20 or 0x28 bytes in size. Decrypted section is always the same, see comments: <a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://pastie.org/private/rzg83pokd4vnxg60dj3qwg">http://pastie.org/private/rzg83pokd4vnxg60dj3qwg</a>
+</p><p>Taken from: isoldr/appldr/lv1ldr
+</p>
+<h2><span class="mw-headline" id="eEID">eEID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=4" title="Edit section: eEID">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="eid0">eid0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=5" title="Edit section: eid0">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Used for individual ps3/psp/psn information.
+</p>
+<h4><span class="mw-headline" id="eid0_individuals_seed">eid0 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=6" title="Edit section: eid0 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>ABCAAD1771EFABFC2B921276FAC2130C
+37A6BE3FEF82C79F3BA5733FC35A690B
+08B358F970FA16A3D2FFE2299E841EE4
+D3DB0E0C9BAEB51BC7DFF10467472F85
+</pre>
+<p>Taken from: aim_spu_module.self/isoldr/appldr/lv1ldr/spu_token_processor.self/spu_utoken_processor.self
+</p>
+<h4><span class="mw-headline" id="eid0_keyseed_0x0">eid0 keyseed 0x0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=7" title="Edit section: eid0 keyseed 0x0">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>2ED7CE8D1D55454585BF6A3281CD03AF
+</pre>
+<p>Taken from: aim_spu_module.self
+</p>
+<h4><span class="mw-headline" id="eid0_keyseed_0x6">eid0 keyseed 0x6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=8" title="Edit section: eid0 keyseed 0x6">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>3AB0E6C4ACFFB629362FFBBBDBC854BC
+</pre>
+<p>Taken from: pspemudrm (kirk)
+</p>
+<h4><span class="mw-headline" id="eid0_keyseed_0x6_for_perconsole_encrypted_private_key">eid0 keyseed 0x6 for perconsole encrypted private key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=9" title="Edit section: eid0 keyseed 0x6 for perconsole encrypted private key">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>33793B9F79E2EBAE55D4D6BF0ED376E6
+</pre>
+<p>Encrypt it with perconsole eid0_key to obtain the decryption key to decrypt Your perconsole ecdsa private key, located into the decrypted eid0 section 6 at offset 0x88.<br>
+Encryption algo: aes-256-ecb.<br>
+Decryption algo: aes-128-cbc. iv = 0.
+</p><p>Taken from: pspemudrm (kirk)
+</p>
+<h4><span class="mw-headline" id="eid0_keyseed_0xA">eid0 keyseed 0xA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=10" title="Edit section: eid0 keyseed 0xA">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>30B0395DC5835AAA3A7986B44AFAE684
+</pre>
+<p>Taken from: aim_spu_module.self
+</p>
+<h3><span class="mw-headline" id="eid1">eid1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=11" title="Edit section: eid1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Used for individual SYSCON information.
+</p>
+<h4><span class="mw-headline" id="eid1_individuals_seed">eid1 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=12" title="Edit section: eid1 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>0AB7611E56DA45076B46129718F5C80E
+80BFFBA1800145BF2F1C02F7C011FDE8
+E486A45215B5FFFF432DD7F7DFF0C47D
+989ADED904DD987FC93BD735DA114397
+</pre>
+<p>Taken from: <span style="background:#18845A"><small><abbr title="SD/System Debugger"><a href="https://www.psdevwiki.com/ps3/Target_ID" title="Target ID"><span style="color:#ffffff;">&nbsp;SD&nbsp;</span></a></abbr></small></span> sc_iso.self/sc_iso_factory.self
+</p>
+<h4><span class="mw-headline" id="eid1_individuals_seed_2">eid1 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=13" title="Edit section: eid1 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>B0D655764C3B44B338F32DD1D0999B66
+48A35A2CEB15E28EECDC2DC0B4C7EB05
+DC8225C0D5789DBB2E89A24A78585800
+72363834EE1A116C2CD25E58EE6763F7
+</pre>
+<p>Taken from: sc_iso.self/sc_iso_factory.self/ss_sc_init.self
+</p><p><br>
+</p>
+<h4><span class="mw-headline" id="time_eid1_keyseed">time eid1 keyseed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=14" title="Edit section: time eid1 keyseed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>A8DCAB3577F30F7B81C788B80446B03F
+C240BD9F72BBFC7268E4E688C1C24F6E
+EF100F2B53199715A99C3E4794487073
+74CE56F619FBD2486115A2FBA4F5FBB4
+</pre>
+<p>Taken from all decrypted eid1, offset 0x110, size 0x40
+</p>
+<h3><span class="mw-headline" id="eid2">eid2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=15" title="Edit section: eid2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Used for individual bluray information.
+</p>
+<h4><span class="mw-headline" id="eid2_individuals_seed">eid2 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=16" title="Edit section: eid2 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>7492E57C2C7C63F44942268FB41C58ED
+668341F9C97B298396FA9D82075199D8
+BC1A934B374FA38D46AF94C7C33373B3
+09572084FE2DE34457E0F8527A34753D
+</pre>
+<p>Taken from: fdm_spu_module.self
+</p>
+<h4><span class="mw-headline" id="eid2_DES_key">eid2 DES key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=17" title="Edit section: eid2 DES key">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>6CCAB35405FA562C
+</pre>
+<p>Taken from: Lv2diag.self for BD remarry
+</p>
+<h4><span class="mw-headline" id="eid2_DES_iv">eid2 DES iv</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=18" title="Edit section: eid2 DES iv">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>0000000000000000
+</pre> 
+<p>Taken from: Lv2diag.self for BD remarry
+</p>
+<h3><span class="mw-headline" id="eid3">eid3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=19" title="Edit section: eid3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Used for individual CPRM information.
+</p>
+<h4><span class="mw-headline" id="eid3_individuals_seed">eid3 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=20" title="Edit section: eid3 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>01D0496A3BADD1735570CB29E16FA231
+4FA9FD1ABA19A1C69EEA2F4AA607A71C
+6FE23EF8DFBB0F2D9D452CD5FAD58B74
+5BF8A4A50D8BDB29B2F4BF14C44ADD76
+</pre>
+<p>Taken from: CprmModule.spu.isoself
+</p>
+<h4><span class="mw-headline" id="eid3_keyseed">eid3 keyseed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=21" title="Edit section: eid3 keyseed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>5FFF3FD81E18B956DAE4E6D3368297EF
+</pre>
+<p>Taken from: CprmModule.spu.isoself
+</p>
+<h4><span class="mw-headline" id="eid3_static_key">eid3 static key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=22" title="Edit section: eid3 static key">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>D99406CA4BF30750436A454736834589
+</pre>
+<p>Taken from: CprmModule.spu.isoself
+</p>
+<h3><span class="mw-headline" id="eid4">eid4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=23" title="Edit section: eid4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Used for individual bluray auth information.
+</p>
+<h4><span class="mw-headline" id="eid4_individuals_seed">eid4 individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=24" title="Edit section: eid4 individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>3EC20C17021901978A2971793829D308
+0429FA84E33E7F730C1D416EEA25CAFB
+3DE02BC005EA490B03E99198F83F101F
+1BA34B50589428ADD2B3EB3FF4C31A58
+</pre>
+<p>Taken from: sv_iso_spu_module.self
+</p>
+<h2><span class="mw-headline" id="HDD_Specific">HDD Specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=25" title="Edit section: HDD Specific">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Used for individual hard drive information.
+</p>
+<h3><span class="mw-headline" id="ATA_data_individuals_seed">ATA data individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=26" title="Edit section: ATA data individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>D92D65DB057D49E1A66F2274B8BAC508
+83844ED756CA79516362EA8ADAC60326
+</pre>
+<p>Taken from: sb_iso_spu_module.self
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="ATA_tweak_individuals_seed">ATA tweak individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=27" title="Edit section: ATA tweak individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>C3B3B5AACC74CD6A48EFABF44DCDF16E
+379F55F5777D09FBEEDE07058E94BE08
+</pre>
+<p>Taken from: sb_iso_spu_module.self
+</p>
+<h3><span class="mw-headline" id="ENCDEC_data_individuals_seed">ENCDEC data individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=28" title="Edit section: ENCDEC data individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>E2D05D4071945B01C36D5151E88CB833
+4AAA298081D8C44F185DC660ED575686
+</pre>
+<h3><span class="mw-headline" id="ENCDEC_tweak_individuals_seed">ENCDEC tweak individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=29" title="Edit section: ENCDEC tweak individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>02083292C305D538BC50E699710C0A3E
+55F51CBAA535A38030B67F79C905BDA3
+</pre>
+<h3><span id="Arcade/SYSDBG_Seeds"></span><span class="mw-headline" id="Arcade.2FSYSDBG_Seeds">Arcade/SYSDBG Seeds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=30" title="Edit section: Arcade/SYSDBG Seeds">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="ATA_data/tweak"></span><span class="mw-headline" id="ATA_data.2Ftweak">ATA data/tweak</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=31" title="Edit section: ATA data/tweak">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>DA73ED9020918F4C0A703DCCF890617B
+FFD25E3340009109583C643DF4A21324
+</pre>
+<h4><span class="mw-headline" id="ENCDEC_data">ENCDEC data</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=32" title="Edit section: ENCDEC data">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>D2BCFF742D571A80DFEE5E2496D19C3A
+6F25FA0FC69764CAC20F4269EB540FD8
+</pre>
+<h4><span class="mw-headline" id="ENCDEC_tweak">ENCDEC tweak</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=33" title="Edit section: ENCDEC tweak">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre>C19C7F987EDB6E244B07BEDEFA1E6CC9
+F08524D98C05654CC742141E01F823E1
+</pre>
+<h2><span class="mw-headline" id="PS2_Emu_Specific">PS2 Emu Specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=34" title="Edit section: PS2 Emu Specific">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Used for ps2 memory card save generation
+</p>
+<h3><span class="mw-headline" id="mc_iso_individuals_seed">mc_iso individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=35" title="Edit section: mc iso individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>5238D0FA23A993B8971D400F982D2177
+8130DCF4DE7C4E119C1DE286AA37610B
+1AB711223F27681659AE6B71F184F9CB
+0E00D08AD06AF9F7A1D55F69C71D2B25
+</pre>
+<p>Taken from: mc_iso_spu_module.self
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="me_iso_individuals_seed">me_iso individuals seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=36" title="Edit section: me iso individuals seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>F2336E2563B603077A76657126CAE4DB
+820E92856B693CE81422E9FB1C1CA5B3
+E943388E4B480350AA24A5FBFABFD172
+D97A1E25DE3E64A0A7A482528456B174
+</pre>
+<p>Taken from: me_iso_spu_module.self
+</p>
+<h2><span class="mw-headline" id="Syscon_Specific">Syscon Specific</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=37" title="Edit section: Syscon Specific">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Used for individual SYSCON authentication.
+</p>
+<h3><span class="mw-headline" id="sc_iso_module_seed">sc_iso module seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=38" title="Edit section: sc iso module seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>B0D655764C3B44B338F32DD1D0999B66
+48A35A2CEB15E28EECDC2DC0B4C7EB05
+DC8225C0D5789DBB2E89A24A78585800
+72363834EE1A116C2CD25E58EE6763F7
+</pre>
+<h3><span class="mw-headline" id="sc_iso_module_seed_SD">sc_iso module seed <span style="background:#18845A"><small><abbr title="SD/System Debugger"><a href="https://www.psdevwiki.com/ps3/Target_ID" title="Target ID"><span style="color:#ffffff;">&nbsp;SD&nbsp;</span></a></abbr></small></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=39" title="Edit section: sc iso module seed  SD ">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>0AB7611E56DA45076B46129718F5C80E
+80BFFBA1800145BF2F1C02F7C011FDE8
+E486A45215B5FFFF432DD7F7DFF0C47D
+989ADED904DD987FC93BD735DA114397
+</pre>
+<h3><span class="mw-headline" id="sc_magic::auth_magic">sc_magic::auth_magic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=40" title="Edit section: sc magic::auth magic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>63DCA7D3FEE47F749A408363F1104E8F auth_1 0x00
+4D10094324009CC8E6B69C70328E34C5 auth_2 0x00
+D97949BAD8DA69D0E01BF31523732832 auth_1 0x01
+C9D1DD3CE27E356697E26C12A7B316A8 auth_2 0x01
+72FF4C7FD2A5908D6C9C3FD3C037FEEB auth_1 0x02
+FA8D083C052080D4A19453452E179A44 auth_2 0x02
+35F8421295CBF484E06A17FA2FB98686 auth_1 0x03
+C2F3685E7EF49768337B79FDBC8265BE auth_2 0x03
+C6E19331FC6D75D1C2800913D1793C7E auth_1 0x04
+771A755F402D5196D02A0D092BEFE01E auth_2 0x04
+B11701629ED2FA918F9F4D8B78D72D74 auth_1 0x05
+19930DE0B6FDCFFC7BA630B82D530431 auth_2 0x05
+4420ED722FEA35021955AB40C78EE6DF auth_1 0x06
+3E67C2D9432E15D09BEF0E6C6492455D auth_2 0x06
+5FA6AF2BB07F72E2ABF80B4EF6DA98E0 auth_1 0x07
+8CB782E53E8AEB8A768D366598281B9B auth_2 0x07
+</pre>
+<p>Size 256<br>
+</p>
+<h3><span class="mw-headline" id="secure_com_lib_internal_key::session_key_create_key">secure_com_lib_internal_key::session_key_create_key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=41" title="Edit section: secure com lib internal key::session key create key">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>9F1DF816BB4A4A0129D031CFB0AD9B30 0x00 0x50
+D302FDE17578FBDBA1058449BA5C1BEA 0x01 0x60
+0E6B7480E5CEB2562A3347BB41012455 0x02 0x70
+7910AC5D2AD16001F6A2783979096103 0x03 0x80
+E3052804B7D2836F2879A1751BB40D48 0x04 0x90
+EF586F9D599170676850590BA67D4BC7 0x05 0xA0
+5D9598637AF25F8023623B1268B5131A 0x06 0xB0
+0EAA32140A2861D8659626F6CE2286DB 0x07 0xC0
+</pre>
+<h3><span class="mw-headline" id="secure_com_lib_internal_key::time_key">secure_com_lib_internal_key::time_key</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=42" title="Edit section: secure com lib internal key::time key">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>E3EFDE987E4A2D3F8CF7B3B60E846B21 0x00 0x110 seed with 0xD0 keyvault key
+4AB026664E9D02F53EFF9544549B1F97 0x01 0x120 seed with 0xE0 keyvault key
+7ECA7F299891F1B243119E35AE94C3DE 0x02 0x130 seed with 0xF0 keyvault key
+E0B7A0867CF44923BAE65E3386460C80 0x03 0x140 seed with 0x100 keyvault key
+</pre>
+<h3><span class="mw-headline" id="random_xseed">random xseed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=43" title="Edit section: random xseed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>AB19502586A381E670D34F560EAAF31A20475903
+</pre>
+<p>used for generating a random number through the use of ch74
+</p>
+<h3><span class="mw-headline" id="data_key_seed">data key seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=44" title="Edit section: data key seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>73686572776F6F645F73735F73656564 "sherwood_ss_seed"
+</pre>
+<h3><span class="mw-headline" id="tweak_key_seed">tweak key seed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=45" title="Edit section: tweak key seed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>73735F736565645F6F6E655F6D6F7265 "ss_seed_one_more"
+</pre>
+<h3><span class="mw-headline" id="vtrm_keyseed">vtrm keyseed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=46" title="Edit section: vtrm keyseed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>6B6579736565645F666F725F73726B32 "keyseed_for_srk2"
+</pre>
+<h3><span class="mw-headline" id="seed_for_backup">seed for backup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=47" title="Edit section: seed for backup">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>736565645F666F725F6261636B757000 "seed_for_backup."
+</pre>
+<h3><span class="mw-headline" id="eEID1_fallback">eEID1 fallback</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=48" title="Edit section: eEID1 fallback">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>84DEDB601CBFE24C17DDC7BD1B466406
+0126A315C548FDD56C0DF6DE19667079
+CB21566A84CAFE5CC883F5255E9586E4
+4C02AC7201D69D2F6274E86918BE2703
+4A86714B7D122170D45E317F97D173E7
+615506000725FDE96EE7ACA391D06F73
+3B24EABA2DCB71B6AEC2AB4B809ABD09
+B8B7EDD3361CC1F3B71DA99617B7DC01
+518E3B27164816ACF9C89157B07BB6C8
+633D8DD1CFCE1E15AED07083E38E8EBB
+145138B3BA0E240F3A7E77678D9D2961
+BD123E045C9C0C58A9A03EB8940A1B99
+75A1EE8E575ADFD8811BDE09B098ED38
+F87F7DC557618412C827EF32FD5215D0
+20900F5D2DF6C1BA52CB1B2E5DBC0310
+5C91D011F8F232DD14CFA4E9A3108069
+DFA88A3C2E27CB4892E8074794B32CF4
+B78EC1E9E6A83ECC280182E29E22EDCE
+A0A8BA86FF4304C488A8BD461A9B2D6F
+E56C435F841C561E0E724F6CEDF38505
+1EBB412CB7BBD395D56FD515782C5957
+B687263DF0F4E5353BBAD52CCE4C634F
+842663A906ED14319746A91FC63E556A
+60426AB2283679450F76054E0EB39F22
+F92881B49D9811F846E392FB66056DCB
+267AA10094FD262D121B5576A0E6C0F1
+58DEF55F710C789D8ED78CDE4E6AD6F8
+2D9F8180B8C050D9B1847BC50803D3A4
+5CB1178E0241C39AC3AA77558BA96567
+7EECBF204F0760ECD976FE20AE97BA5C
+4150D9D7EA9AC4C286E63C21FBDCE903
+B6AD8EDA663C266A1B8F81F843A1C919
+5856F90CB7390EBDB5A000D87F4E2619
+CDA436059FD3723C3B6DA657E6D936D8
+EA517214BA336B9B57912840AF8A3E76
+EA715EE979F03A9857AA358E83B45E0E
+8FC797DF9927B0E933EA33EBA1592231
+E34C8E3E54C98E27C2E3AB69CC0E45F1
+AD1BC8B53D9F87107F3FB7BB1B5E26B2
+B710593154505CF21A36E2E57823D5BE
+0D5D3AB4CD04B1C27A74BEE02E6D25F4
+</pre>
+<h2><span class="mw-headline" id="eEID1_fallback_decrypted">eEID1 fallback decrypted</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=49" title="Edit section: eEID1 fallback decrypted">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>1E05FC2C1A5C5512E0604252C7A3C942
+9E6C2A490A6543914510071EC93987BB
+3BF1CDB740E234FE7D9A9444FC53E3AB
+57548976BA11018074C3FF2ADD1A469A
+680EDC509AD0CBC6C90CEA843905482A
+BEAB40BA985E134492FD8FC1487DC828
+0EEF78B26AD1A241C38C743BB344DAFE
+1A0B7E797669107B673A95C4617AF0EC
+3E600567DC98B61CFB44F5972086CD38
+C36D5EC828F2D81476302FED32FC2E83
+162FA5D83931BFE1154321CDAA240C6C
+38B27DF52F81E0069F906075EDB6E739
+4EE82A46A9729A68728735DFC9C9F461
+A29CD185CC02CF9EB37BDD83D0ABA0AA
+BA9D51FBD95F88E3CBDDD2300E51F086
+3A059B178EB657C8E793473B0CC3298B
+E9AF9924FDD6BCD0E7D3B43161DDF8BF
+A8DCAB3577F30F7B81C788B80446B03F
+C240BD9F72BBFC7268E4E688C1C24F6E
+EF100F2B53199715A99C3E4794487073
+74CE56F619FBD2486115A2FBA4F5FBB4
+5900A06CB88F39D4D2B430B299EA6910
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+00000000000000000000000000000000
+</pre>
+<ul><li>decrypted with flash key 0x10</li></ul>
+<h1><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=50" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>libeeid / ps3hdd_poc / ps3_decrypt_tools were adapted for this. so use them</li>
+<li>you'll need eid_root_key, hdd image and eid</li>
+<li>the seeds are spreaded all over the wiki, so it's nice to have a spot where you can look at the seed you wish&nbsp;:)</li>
+<li>many thanks to fail0verfl0w for this. gotta love the print_hash function&nbsp;:3</li>
+<li><a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="https://github.com/zecoxao/ps3_decrypt_tools">https://github.com/zecoxao/ps3_decrypt_tools</a> tools for decrypting and encrypting.</li>
+<li>Regarding syscon, there are two chunks of data, one located at ss_sc_init and the other at sc_iso with sizes 0x290 and 0x280 respectively. one is after keyseed_for_srk2 and the other is between k4 and k5.</li>
+<li>ss_sc_init contains fallback EID1 of size 0x290 bytes.</li></ul>
+<h1><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=51" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://pastie.org/2858016">THE PLACEHOLDER</a> &lt;- this curious pastie contains the first 4 bytes of several keys/seeds
+</p>
+<pre>1st-eid2 indiv seed
+2nd-eid0 indiv seed
+3rd-eid1 indiv seed
+4th-eid4 indiv seed
+5th-ata data seed
+6th-me iso indiv seed
+7th-mc iso indiv seed
+</pre>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.ps3devwiki.com/wiki/Iso_module">isolated modules</a> &lt;- used as reference for eid specific seeds, amongst others
+</p>
+<h1><span id="What&#39;s_inside:"></span><span class="mw-headline" id="What.27s_inside:">What's inside:</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=52" title="Edit section: What&#39;s inside:">edit</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Each_EID0_Section_(0xC0_bytes)"></span><span class="mw-headline" id="Each_EID0_Section_.280xC0_bytes.29">Each EID0 Section (0xC0 bytes)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=53" title="Edit section: Each EID0 Section (0xC0 bytes)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Description</th>
+<th>Length</th>
+<th>Note
+</th></tr>
+<tr>
+<td>Data</td>
+<td>0x10</td>
+<td>contains the actual data of the file (either idps or psid)
+</td></tr>
+<tr>
+<td>plaintext public key</td>
+<td>0x28</td>
+<td>contains the section's public key (without padding)
+</td></tr>
+<tr>
+<td>R</td>
+<td>0x14</td>
+<td>part of the ecdsa signature pair (r,s)
+</td></tr>
+<tr>
+<td>S</td>
+<td>0x14</td>
+<td>part of the ecdsa signature pair (r,s)
+</td></tr>
+<tr>
+<td>public key</td>
+<td>0x28</td>
+<td>ecdsa public key (can be used to verify ecdsa signature RS)
+</td></tr>
+<tr>
+<td>encrypted private key</td>
+<td>0x20</td>
+<td>encrypted blob that contains the section's private key (with padding)
+</td></tr>
+<tr>
+<td>omac1/cmac</td>
+<td>0x10</td>
+<td>hash of the previous information in CMAC1/OMAC mode
+</td></tr>
+<tr>
+<td>padding</td>
+<td>0x8</td>
+<td>zero byte padding
+</td></tr></tbody></table>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://pastie.org/6169158">Source of the information</a>
+</p>
+<h2><span class="mw-headline" id="KeySlots_at_SYSCON">KeySlots at SYSCON</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=54" title="Edit section: KeySlots at SYSCON">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Description</th>
+<th>Offset</th>
+<th>Length</th>
+<th>Size Note
+</th></tr>
+<tr>
+<td>0x00 EEPROM Key</td>
+<td>0</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>EID1 FLASH KEY</td>
+<td>0x10</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>EID1 EEPROM KEY</td>
+<td>0x20</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>SNVS Key</td>
+<td>0x30</td>
+<td>0x10</td>
+<td>Size is 0x10, total size 0x400
+</td></tr>
+<tr>
+<td>Also Init Key</td>
+<td>0x40</td>
+<td>0x10</td>
+<td>0x20
+</td></tr>
+<tr>
+<td>secure_com_lib_internal_key::session_key_create_key</td>
+<td>0x50</td>
+<td>0x80</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>0x4E0 and Up Keys(Time)</td>
+<td>0xD0</td>
+<td>0x40</td>
+<td>0x20
+</td></tr>
+<tr>
+<td>AUTH1 Key</td>
+<td>0x110</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>AUTH2 Key</td>
+<td>0x120</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>AUTH1/AUTH2 Key</td>
+<td>0x130</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>PTCH Related Key</td>
+<td>0x140</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>3C3A043F Related Key</td>
+<td>0x150</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>0x2710 Key</td>
+<td>0x160</td>
+<td>0x10</td>
+<td>0x40
+</td></tr>
+<tr>
+<td>0x2760 Key</td>
+<td>0x170</td>
+<td>0x10</td>
+<td>0x20
+</td></tr>
+<tr>
+<td>0x2790 Key</td>
+<td>0x180</td>
+<td>0x10</td>
+<td>0x20
+</td></tr>
+<tr>
+<td>0x26B0,0x26E0,0x26F0 Key</td>
+<td>0x190</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>0x26C0 Key</td>
+<td>0x1A0</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>0x26D0 Key</td>
+<td>0x1B0</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+<tr>
+<td>0x2700 Key</td>
+<td>0x1D0</td>
+<td>0x10</td>
+<td>0x10
+</td></tr>
+</tbody></table>
+<h2><span id="EID1_(0x2A0_bytes)"></span><span class="mw-headline" id="EID1_.280x2A0_bytes.29">EID1 (0x2A0 bytes)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=55" title="Edit section: EID1 (0x2A0 bytes)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Offset</th>
+<th>Length</th>
+<th>Description
+</th></tr>
+<tr>
+<td>0</td>
+<td>0x10</td>
+<td>INIT Seed
+</td></tr>
+<tr>
+<td>0x10</td>
+<td>0x80</td>
+<td>AUTH1 Reencrypted Keyseeds
+</td></tr>
+<tr>
+<td>0x90</td>
+<td>0x80</td>
+<td>AUTH2 Reencrypted Keyseeds
+</td></tr>
+<tr>
+<td>0x110</td>
+<td>0x40</td>
+<td>Keyseeds (Time Service Purpose)
+</td></tr>
+<tr>
+<td>0x150</td>
+<td>0x10</td>
+<td>KeySeed (SNVS/Time Related)
+</td></tr>
+<tr>
+<td>0x160</td>
+<td>0x120</td>
+<td>Padding (Zeroes)
+</td></tr>
+<tr>
+<td>0x280</td>
+<td>0x10</td>
+<td>CMAC of Encrypted Data Using Master Key 0x20 if on EEPROM to CMAC (and encrypt/decrypt) or Master Key 0x10 if on FLASH
+</td></tr>
+<tr>
+<td>0x290</td>
+<td>0x10</td>
+<td>CMAC of Encrypted FLASH Data Using Perconsole Key encrypted using root key and EID1 Seeds
+</td></tr>
+</tbody></table>
+<h2><span id="EID2(0x730_bytes)"></span><span class="mw-headline" id="EID2.280x730_bytes.29">EID2(0x730 bytes)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=56" title="Edit section: EID2(0x730 bytes)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://www.psdevwiki.com/ps3/Hypervisor_Reverse_Engineering#Remarrying">http://www.psdevwiki.com/ps3/Hypervisor_Reverse_Engineering#Remarrying</a>
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Description</th>
+<th>Length</th>
+<th>Note
+</th></tr>
+<tr>
+<td>Header</td>
+<td>0x20</td>
+<td>
+</td></tr>
+<tr>
+<td>P(rimary) block</td>
+<td>0x80</td>
+<td>contains bd drive info
+</td></tr>
+<tr>
+<td>S(econdary) block</td>
+<td>0x690</td>
+<td>contains bd drive info
+</td></tr></tbody></table>
+<h2><span id="EID3(0x100)"></span><span class="mw-headline" id="EID3.280x100.29">EID3(0x100)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=57" title="Edit section: EID3(0x100)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a target="_blank" rel="nofollow noreferrer noopener" class="external free" href="http://www.psdevwiki.com/ps3/Hypervisor_Reverse_Engineering#Communication">http://www.psdevwiki.com/ps3/Hypervisor_Reverse_Engineering#Communication</a>
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Offset</th>
+<th>Description</th>
+<th>Length</th>
+<th>Note
+</th></tr>
+<tr>
+<td>0x00</td>
+<td>Header</td>
+<td>0x20</td>
+<td>contains ckp_management_id, size of cprm keys + sha1 digest + padding and nonce
+</td></tr>
+<tr>
+<td>0x20</td>
+<td>cprm player keys</td>
+<td>0xB8</td>
+<td>
+</td></tr>
+<tr>
+<td>0xD8</td>
+<td>sha1 digest</td>
+<td>0x14</td>
+<td>sha1 digest of previous section
+</td></tr>
+<tr>
+<td>0xEC</td>
+<td>padding</td>
+<td>0x4</td>
+<td>
+</td></tr>
+<tr>
+<td>0xF0</td>
+<td>omac1 digest</td>
+<td>0x10</td>
+<td>omac1 digest of whole eid3
+</td></tr></tbody></table>
+<h2><span id="EID4(0x30)"></span><span class="mw-headline" id="EID4.280x30.29">EID4(0x30)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=58" title="Edit section: EID4(0x30)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Description</th>
+<th>Length</th>
+<th>Note
+</th></tr>
+<tr>
+<td>Drive Key 1</td>
+<td>0x10</td>
+<td>Encrypts data sent from host to bd drive
+</td></tr>
+<tr>
+<td>Drive Key 2</td>
+<td>0x10</td>
+<td>Decrypts data sent from bd drive to host
+</td></tr>
+<tr>
+<td>CMAC/OMAC1</td>
+<td>0x10</td>
+<td>Hash of the previous bytes in CMAC/OMAC1 mode
+</td></tr>
+</tbody></table>
+<h2><span id="EID5_(0xA00)"></span><span class="mw-headline" id="EID5_.280xA00.29">EID5 (0xA00)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.psdevwiki.com/ps3/edit/Seeds?section=59" title="Edit section: EID5 (0xA00)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The largest and quite possibly the most important EID of all 6. It's unknown what is inside this specific EID. We'll probably never know what's inside it without analyzing every possible clue about the PS3. And even then, it might be impossible to find it's real use. It's size is similar to EID0, but it has an aditional 0x1A0 bytes.
+</p>
+<table class="navbox" cellspacing="0" style=";"><tbody><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible uncollapsed" style="width:100%;background:transparent;color:inherit;;"><tbody><tr><th scope="col" style=";" class="navbox-title" colspan="3"><div class="noprint plainlinks hlist navbar" style=""><ul><li class="nv-view"><a href="https://www.psdevwiki.com/ps3/Template:Reverse_engineering" title="Template:Reverse engineering"><span style=";;background:none transparent;border:none;" title="View this template">v</span></a></li><li class="nv-edit"><a target="_blank" rel="nofollow noreferrer noopener" class="external text" href="http://www.psdevwiki.com/ps3/edit/Template:Reverse_engineering"><span style=";;background:none transparent;border:none;" title="Edit this template">e</span></a></li></ul></div><div class="" style="font-size:110%;">
+<a href="https://www.psdevwiki.com/ps3/Reverse_engineering" title="Reverse engineering">Reverse engineering</a></div></th></tr><tr style="height:2px;"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">General</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/Bluedisk_EID0_reDRM" title="Bluedisk EID0 reDRM">Bluedisk EID0 reDRM</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Boot_Order" title="Boot Order">Boot Order</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Bugs_%26_Vulnerabilities" title="Bugs &amp; Vulnerabilities">Bugs &amp; Vulnerabilities</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Dumping_Bootldr" title="Dumping Bootldr">Dumping Bootldr</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Dumping_Metldr" title="Dumping Metldr">Dumping Metldr</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Files_on_the_PS3" title="Files on the PS3">Files on the PS3</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/KaKaRoTo_Kind_of_%C2%B4Jailbreak%C2%B4" title="KaKaRoTo Kind of ´Jailbreak´">KaKaRoTo_Kind_of_´Jailbreak´</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS3Cobra_Payload_Reverse_Engineering" title="PS3Cobra Payload Reverse Engineering">PS3Cobra Payload Reverse Engineering</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS3UserCheat" title="PS3UserCheat">PS3UserCheat</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/QA_Flagging" title="QA Flagging">QA Flagging</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/ReDRM_/_Piracy_dongles" title="ReDRM / Piracy dongles">ReDRM / Piracy dongles</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Revokation" title="Revokation">Revokation</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/RSOD_Fix" title="RSOD Fix">RSOD Fix‎</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Rtcalarm.dat" title="Rtcalarm.dat">rtcalarm.dat</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Whitelisting" title="Whitelisting">Whitelisting</a></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td><td class="navbox-image" style="width:0%;padding:0px 0px 0px 2px;" rowspan="25"><div>
+<img alt="" src="./PS3_seeds_files/50px-Main_reverse.png" width="50" height="50" srcset="/ps3/images/thumb/3/32/Main_reverse.png/75px-Main_reverse.png 1.5x, /ps3/images/3/32/Main_reverse.png 2x"></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Hypervisor</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Hypervisor_Reverse_Engineering" title="Hypervisor Reverse Engineering">Hypervisor Reverse Engineering</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Repository_Nodes" title="Repository Nodes">Repository Nodes</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Services</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/AIM_Manager" title="AIM Manager">AIM Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/AV_Manager" title="AV Manager">AV Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Dispatcher_Manager" title="Dispatcher Manager">Dispatcher Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Factory_Data_Manager" title="Factory Data Manager">Factory Data Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Indi_Info_Manager" title="Indi Info Manager">Indi Info Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/SB_Manager" title="SB Manager">SB Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/SC_Manager" title="SC Manager">SC Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Secure_LPAR_Loader" title="Secure LPAR Loader">Secure LPAR Loader</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Secure_Profile_Loader" title="Secure Profile Loader">Secure Profile Loader</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Secure_RTC_Manager" title="Secure RTC Manager">Secure RTC Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Security_Policy_Manager" title="Security Policy Manager">Security Policy Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Storage_Manager" title="Storage Manager">Storage Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Update_Manager" title="Update Manager">Update Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Updater_Frontend" title="Updater Frontend">Updater Frontend</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/USB_Dongle_Authenticator" title="USB Dongle Authenticator">USB Dongle Authenticator</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/User_Token_Manager" title="User Token Manager">User Token Manager</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Virtual_TRM_Manager" title="Virtual TRM Manager">Virtual TRM Manager</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;"><a href="https://www.psdevwiki.com/ps3/Plugin_Interfaces" title="Plugin Interfaces">Plugin<br>Interfaces</a></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Ap_plugin" title="Ap plugin">ap_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Audioplayer_plugin" title="Audioplayer plugin">audioplayer_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Audiop_plugin_dummy?redlink=1" class="new" title="Audiop plugin dummy (page does not exist)">audiop_plugin_dummy</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Audiop_plugin_mini?redlink=1" class="new" title="Audiop plugin mini (page does not exist)">audiop_plugin_mini</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Auth_plugin" title="Auth plugin">auth_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Autodownload_plugin" title="Autodownload plugin">autodownload_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Autoupdateconf_plugin" title="Autoupdateconf plugin">autoupdateconf_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Avc_plugin" title="Avc plugin">avc_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Avc_util" title="Avc util">avc_util</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Avc2_game_plugin?redlink=1" class="new" title="Avc2 game plugin (page does not exist)">avc2_game_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Avc2_game_video_plugin?redlink=1" class="new" title="Avc2 game video plugin (page does not exist)">avc2_game_video_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Avc2_text_plugin" title="Avc2 text plugin">avc2_text_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Bdp_disccheck_plugin" title="Bdp disccheck plugin">bdp_disccheck_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Bdp_plugin" title="Bdp plugin">bdp_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Bdp_storage_plugin" title="Bdp storage plugin">bdp_storage_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Campaign_plugin" title="Campaign plugin">campaign_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Category_setting_plugin" title="Category setting plugin">category_setting_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Comboplay_plugin" title="Comboplay plugin">comboplay_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Custom_render_plugin" title="Custom render plugin">custom_render_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Data_copy_plugin" title="Data copy plugin">data_copy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Deviceconf_plugin" title="Deviceconf plugin">deviceconf_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Dlna_plugin" title="Dlna plugin">dlna_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Download_plugin" title="Download plugin">download_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Dtcpip_util" title="Dtcpip util">dtcpip_util</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Edy_plugin" title="Edy plugin">edy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Esehttp" title="Esehttp">esehttp</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eseibrd" title="Eseibrd">eseibrd</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eseidle" title="Eseidle">eseidle</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eselock" title="Eselock">eselock</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eula_cddb_plugin" title="Eula cddb plugin">eula_cddb_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eula_hcopy_plugin" title="Eula hcopy plugin">eula_hcopy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Eula_net_plugin" title="Eula net plugin">eula_net_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Explore_plugin" title="Explore plugin">explore_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Explore_plugin_ft" title="Explore plugin ft">explore_plugin_ft</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Explore_plugin_game?redlink=1" class="new" title="Explore plugin game (page does not exist)">explore_plugin_game</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/Explore_plugin_np?redlink=1" class="new" title="Explore plugin np (page does not exist)">explore_plugin_np</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Filecopy_plugin" title="Filecopy plugin">filecopy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Friendim_plugin" title="Friendim plugin">friendim_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Friendml_plugin" title="Friendml plugin">friendml_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Friendtrophy_plugin" title="Friendtrophy plugin">friendtrophy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Game_ext_plugin" title="Game ext plugin">game_ext_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Game_indicator_plugin" title="Game indicator plugin">game_indicator_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Game_plugin" title="Game plugin">game_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Gamedata_plugin" title="Gamedata plugin">gamedata_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Gamelib_plugin" title="Gamelib plugin">gamelib_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Gameupdate_plugin" title="Gameupdate plugin">gameupdate_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Hknw_plugin" title="Hknw plugin">hknw_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Idle_plugin" title="Idle plugin">idle_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Impose_plugin" title="Impose plugin">impose_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Kensaku_plugin" title="Kensaku plugin">kensaku_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Msgdialog_plugin" title="Msgdialog plugin">msgdialog_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Mtpinitiator_plugin" title="Mtpinitiator plugin">mtpinitiator_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Musicbrowser_plugin" title="Musicbrowser plugin">musicbrowser_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Nas_plugin" title="Nas plugin">nas_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Netconf_plugin" title="Netconf plugin">netconf_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Newstore_plugin" title="Newstore plugin">newstore_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Np_eula_plugin" title="Np eula plugin">np_eula_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Np_matching_plugin" title="Np matching plugin">np_matching_plugin</a>&nbsp;<span style="font-weight:bold;">·</span>  <a href="https://www.psdevwiki.com/ps3/Np_multisignin_plugin" title="Np multisignin plugin">np_multisignin_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Np_sns_plugin" title="Np sns plugin">np_sns_plugin</a>&nbsp;<span style="font-weight:bold;">·</span>  <a href="https://www.psdevwiki.com/ps3/Npsignin_plugin" title="Npsignin plugin">npsignin_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Np_trophy_ingame" title="Np trophy ingame">np_trophy_ingame</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Np_trophy_plugin" title="Np trophy plugin">np_trophy_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Osk" title="Osk">osk</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Oskfullkeypanel" title="Oskfullkeypanel">oskfullkeypanel</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Oskpanel" title="Oskpanel">oskpanel</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Pesm_plugin" title="Pesm plugin">pesm_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Photo_network_sharing_plugin" title="Photo network sharing plugin">photo_network_sharing_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Photolist_plugin" title="Photolist plugin">photolist_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Photoviewer_plugin" title="Photoviewer plugin">photoviewer_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Playlist_plugin" title="Playlist plugin">playlist_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Poweroff_plugin" title="Poweroff plugin">poweroff_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Premo_plugin" title="Premo plugin">premo_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Premo_game_plugin" title="Premo game plugin">premo_game_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Print_plugin" title="Print plugin">print_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Profile_plugin" title="Profile plugin">profile_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Ps3_savedata_plugin" title="Ps3 savedata plugin">ps3_savedata_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Ps3_savedata_plugin_game" title="Ps3 savedata plugin game">ps3_savedata_plugin_game</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Ps3_savedata_plugin_psp" title="Ps3 savedata plugin psp">ps3_savedata_plugin_psp</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Rec_plugin" title="Rec plugin">rec_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Regcam_plugin" title="Regcam plugin">regcam_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Remotedownload_plugin" title="Remotedownload plugin">remotedownload_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Sacd_plugin" title="Sacd plugin">sacd_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Scenefolder_plugin" title="Scenefolder plugin">scenefolder_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Screenshot_plugin" title="Screenshot plugin">screenshot_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Software_update_plugin" title="Software update plugin">software_update_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Soundvisualizer_plugin" title="Soundvisualizer plugin">soundvisualizer_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strviewer_plugin" title="Strviewer plugin">strviewer_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Sysconf_plugin" title="Sysconf plugin">sysconf_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/System_plugin" title="System plugin">system_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Thumthum_plugin" title="Thumthum plugin">thumthum_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Upload_util" title="Upload util">upload_util</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/User_info_plugin" title="User info plugin">user_info_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/User_plugin" title="User plugin">user_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Videodownloader_plugin" title="Videodownloader plugin">videodownloader_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Videoeditor_plugin" title="Videoeditor plugin">videoeditor_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Videoplayer_util" title="Videoplayer util">videoplayer_util</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Videoplayer_plugin" title="Videoplayer plugin">videoplayer_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Vmc_savedata_plugin" title="Vmc savedata plugin">vmc_savedata_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Wboard_plugin" title="Wboard plugin">wboard_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Webbrowser_plugin" title="Webbrowser plugin">webbrowser_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Webbrowser_service" title="Webbrowser service">webbrowser_service</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Webrender_plugin" title="Webrender plugin">webrender_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Xai_plugin" title="Xai plugin">xai_plugin</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Xmb_ingame" title="Xmb ingame">xmb_ingame</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Xmb_plugin" title="Xmb plugin">xmb_plugin</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;"><a href="https://www.psdevwiki.com/ps3/Emulation" title="Emulation">Emulation</a></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/PS1_Emulation" title="PS1 Emulation">PS1 Emulation</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS1_Classics_Emulator_Compatibility_List" title="PS1 Classics Emulator Compatibility List">PS1 Classics Emulator Compatibility List</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS2_Emulation" title="PS2 Emulation">PS2 Emulation</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS2_Classics_Emulator_Compatibility_List" title="PS2 Classics Emulator Compatibility List">PS2 Classics Emulator Compatibility List</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PSP_Emulation" title="PSP Emulation">PSP Emulation</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PSP_Emulator_Compatibility_List" title="PSP Emulator Compatibility List">PSP Emulator Compatibility List</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Extended<br>features</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Printer_support" title="Printer support">Printer support</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Remote_Play" title="Remote Play">Remote Play</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/String_Viewer" title="String Viewer">String Viewer</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Web_Browser" title="Web Browser">Web Browser</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/XMB_In-game_background_music" title="XMB In-game background music">XMB In-game background music</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PS3_and_PSVita_Cross_Functions" title="PS3 and PSVita Cross Functions">PS3 and PSVita Cross Functions</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Widgets" title="Widgets">Widgets</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Life_with_PlayStation" title="Life with PlayStation">Life with PlayStation</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PlayView" title="PlayView">PlayView</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/XMB_Manuals" title="XMB Manuals">XMB Manuals</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Online</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Consoleban" title="Consoleban">Consoleban</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Environments" title="Environments">Environments</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Online_Connections" title="Online Connections">Online Connections</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PSN" title="PSN">PSN</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/PSN_Handshake_Signup" title="PSN Handshake Signup">PSN Handshake Signup</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/X-I-5-Ticket" title="X-I-5-Ticket">X-I-5-Ticket</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Hardware</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">SC</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/SC_Communication" title="SC Communication">SC Communication</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/SC_EEPROM" title="SC EEPROM">SC EEPROM</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">CELL</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/Cell_Configuration_Ring" title="Cell Configuration Ring">Cell Configuration Ring</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/CELL_Reset_Exploit" title="CELL Reset Exploit">CELL Reset Exploit</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/edit/CellBE_Hardware_Implementation_Registers?redlink=1" class="new" title="CellBE Hardware Implementation Registers (page does not exist)">CellBE Hardware Implementation Registers</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Unlocking_the_8th_SPE" title="Unlocking the 8th SPE">Unlocking the 8th SPE</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/SPU_Isolated_Modules_Reverse_Engineering" title="SPU Isolated Modules Reverse Engineering">SPU Isolated Modules Reverse Engineering</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/SPU_LS_Overflow_Exploit" title="SPU LS Overflow Exploit">SPU LS Overflow Exploit</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">RAM</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/XDR_Configuration" title="XDR Configuration">XDR Configuration</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">SB</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/ENCDEC_Device_Reverse_Engineering" title="ENCDEC Device Reverse Engineering">ENCDEC Device Reverse Engineering</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">HDD</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/HDD_Encryption" title="HDD Encryption">HDD Encryption</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">BD</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/Bluray_disc" title="Bluray disc">Bluray disc</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Basic_Bluray_disc_authentication_procedure" title="Basic Bluray disc authentication procedure">Basic Bluray disc authentication procedure</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/BD_Drive_Reverse_Engineering" title="BD Drive Reverse Engineering">BD Drive Reverse Engineering</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Disc_Identification/Serialization_Data" title="Disc Identification/Serialization Data">Disc Identification/Serialization Data</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/ODE" title="ODE">ODE</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Remarry_Bluray_Drive" title="Remarry Bluray Drive">Remarry Bluray Drive</a></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Tools</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/IDA_pro_disassembler_and_debugger" title="IDA pro disassembler and debugger">IDA pro disassembler and debugger</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/CCAPI" title="CCAPI">CCAPI</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/0x000EAEB0" title="0x000EAEB0">0x000EAEB0</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Strings</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">files</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/Strings:emer_init" title="Strings:emer init">emer_init</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:aim_spu_module" title="Strings:aim spu module">aim spu module‎</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:lv1" title="Strings:lv1">lv1‎</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:hdd_copy" title="Strings:hdd copy">hdd_copy</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:eurus_fw" title="Strings:eurus fw">eurus_fw</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:lv0.elf" title="Strings:lv0.elf">lv0</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:factory_data_mngr" title="Strings:factory data mngr">factory data mngr</a></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";padding-left:0em;padding-right:0em;;"><div style="padding:0em 0.75em;">dumps</div></th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/Strings:lv2_dump_(Rebug_4.46)" title="Strings:lv2 dump (Rebug 4.46)">lv2 dump (Rebug 4.46)</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:lv1_dump_(Rebug_4.46)" title="Strings:lv1 dump (Rebug 4.46)">lv1 dump (Rebug 4.46)</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Strings:bootldr_dump" title="Strings:bootldr dump">bootldr dump (2.70)</a></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Reference</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Archaic" title="Archaic">Archaic</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Drk_notes" title="Drk notes">Drk_notes</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Canaries" title="Canaries">Canaries</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">Keys &amp; Seeds</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist"><div style="padding:0em 0.25em">
+<a href="https://www.psdevwiki.com/ps3/Keys" title="Keys">Keys</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/Per_Console_Keys" title="Per Console Keys">Per Console Keys</a>&nbsp;<span style="font-weight:bold;">·</span> <a class="mw-selflink selflink">Seeds</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/ECDSA_binaries" title="ECDSA binaries">ECDSA binaries</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/AES_binaries" title="AES binaries">AES binaries</a>&nbsp;<span style="font-weight:bold;">·</span> <a href="https://www.psdevwiki.com/ps3/DES_binaries" title="DES binaries">DES binaries</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><th scope="row" class="navbox-group" style=";;">CFW2OFW</th><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist"><div style="padding:0em 0.25em">
+</div><table cellspacing="0" class="nowraplinks navbox-subgroup" style="width:100%;;;;"><tbody><tr><td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-"><div style="padding:">
+<a href="https://www.psdevwiki.com/ps3/CFW2OFW_Compatibility_List" title="CFW2OFW Compatibility List">CFW2OFW Compatibility List</a></div></td></tr></tbody></table><div></div></td></tr></tbody></table></td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20190921194702
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.735 seconds
+Real time usage: 0.744 seconds
+Preprocessor visited node count: 6019/1000000
+Preprocessor generated node count: 11937/1000000
+Post‐expand include size: 134699/2097152 bytes
+Template argument size: 93286/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 7151/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+205.51%  782.195     15 Template:Navbox
+111.25%  423.409     14 Template:Navbox_subgroup
+100.00%  380.604      1 -total
+ 97.16%  369.799      1 Template:Reverse_engineering
+  3.40%   12.958    183 Template:Dot
+  3.00%   11.404      1 Template:Navbar
+  1.40%    5.329      2 Template:Transclude
+  0.44%    1.692      2 Template:SD
+-->
+</div>
+<!-- Saved in parser cache with key psdevwiki_ps3-wiki_:pcache:idhash:2051-0!canonical and timestamp 20190921194702 and revision id 54542
+ -->
+</div>					<div class="printfooter">
+						Retrieved from ‘<a dir="ltr" href="http://www.psdevwiki.com/ps3/index.php?title=Seeds&amp;oldid=54542">http://www.psdevwiki.com/ps3/index.php?title=Seeds&amp;oldid=54542</a>’					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.psdevwiki.com/ps3/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://www.psdevwiki.com/ps3/Category:Reverse_engineering" title="Category:Reverse engineering">Reverse engineering</a></li><li><a href="https://www.psdevwiki.com/ps3/Category:Main" title="Category:Main">Main</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="https://www.psdevwiki.com/ps3/Special:MyTalk" title="Discussion about edits from this IP address [alt-shift-n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="https://www.psdevwiki.com/ps3/Special:MyContributions" title="A list of edits made from this IP address [alt-shift-y]" accesskey="y">Contributions</a></li><li id="pt-login"><a href="https://www.psdevwiki.com/ps3/index.php?title=Special:UserLogin&amp;returnto=Seeds" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="https://www.psdevwiki.com/ps3/Special:RequestAccount" title="You are encouraged to create an account and log in; however, it is not mandatory">Request account</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.psdevwiki.com/ps3/Seeds" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="https://www.psdevwiki.com/ps3/Talk:Seeds" rel="discussion" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.psdevwiki.com/ps3/Seeds">Read</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.psdevwiki.com/ps3/edit/Seeds" title="Edit this page [alt-shift-e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.psdevwiki.com/ps3/history/Seeds" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="https://www.psdevwiki.com/ps3/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search PS3 Developer wiki" title="Search PS3 Developer wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.psdevwiki.com/ps3/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-PS_devwiki_ring" aria-labelledby="p-PS_devwiki_ring-label">
+			<h3 id="p-PS_devwiki_ring-label">PS devwiki ring</h3>
+			<div class="body">
+								<ul>
+					<li id="n-PS3-devwiki"><a href="http://www.psdevwiki.com/ps3/" rel="nofollow" target="_blank">PS3 devwiki</a></li><li id="n-PS4-devwiki"><a href="http://www.psdevwiki.com/ps4/" rel="nofollow" target="_blank">PS4 devwiki</a></li><li id="n-PSP-devwiki"><a href="https://playstationdev.wiki/pspdevwiki/" rel="nofollow" target="_blank">PSP devwiki</a></li><li id="n-PSVita-devwiki"><a href="https://playstationdev.wiki/psvitadevwiki/" rel="nofollow" target="_blank">PSVita devwiki</a></li><li id="n-PS1-devwiki"><a href="https://playstationdev.wiki/ps1devwiki/" rel="nofollow" target="_blank">PS1 devwiki</a></li><li id="n-PS2-devwiki"><a href="https://playstationdev.wiki/ps2devwiki/" rel="nofollow" target="_blank">PS2 devwiki</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.psdevwiki.com/ps3/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li><li id="n-Downloads"><a href="http://www.psdevwiki.com/ps3/files/" rel="nofollow" target="_blank">Downloads</a></li><li id="n-portal"><a href="https://www.psdevwiki.com/ps3/PS3_Developer_wiki:Community_portal" title="About the project, what you can do, and where to find things">Community portal</a></li><li id="n-currentevents"><a href="https://www.psdevwiki.com/ps3/PS3_Developer_wiki:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges"><a href="https://www.psdevwiki.com/ps3/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="https://www.psdevwiki.com/ps3/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li><li id="n-All-Pages"><a href="https://www.psdevwiki.com/ps3/Special:AllPages">All Pages</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" target="_blank" title="The place to find out">Help</a></li><li id="n-Donate"><a href="https://www.psdevwiki.com/ps3/Donations">Donate</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.psdevwiki.com/ps3/Special:WhatLinksHere/Seeds" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://www.psdevwiki.com/ps3/Special:RecentChangesLinked/Seeds" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://www.psdevwiki.com/ps3/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://www.psdevwiki.com/ps3/index.php?title=Seeds&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://www.psdevwiki.com/ps3/index.php?title=Seeds&amp;oldid=54542" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://www.psdevwiki.com/ps3/index.php?title=Seeds&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last modified on 21 September 2019, at 19:47.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt">GNU Free Documentation License 1.2</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.psdevwiki.com/ps3/PS3_Developer_wiki:Privacy_policy" title="PS3 Developer wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="https://www.psdevwiki.com/ps3/PS3_Developer_wiki:About" title="PS3 Developer wiki:About">About PS3 Developer wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.psdevwiki.com/ps3/PS3_Developer_wiki:General_disclaimer" title="PS3 Developer wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.txt" target="_blank"><img src="./PS3_seeds_files/gnu-fdl.png" alt="GNU Free Documentation License 1.2" width="88" height="31"></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/" target="_blank"><img src="./PS3_seeds_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/ps3/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /ps3/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.735","walltime":"0.744","ppvisitednodes":{"value":6019,"limit":1000000},"ppgeneratednodes":{"value":11937,"limit":1000000},"postexpandincludesize":{"value":134699,"limit":2097152},"templateargumentsize":{"value":93286,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7151,"limit":5000000},"timingprofile":["205.51%  782.195     15 Template:Navbox","111.25%  423.409     14 Template:Navbox_subgroup","100.00%  380.604      1 -total"," 97.16%  369.799      1 Template:Reverse_engineering","  3.40%   12.958    183 Template:Dot","  3.00%   11.404      1 Template:Navbar","  1.40%    5.329      2 Template:Transclude","  0.44%    1.692      2 Template:SD"]},"cachereport":{"timestamp":"20190921194702","ttl":2592000,"transientcontent":false}}});});</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-127383156-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":115});});</script>
+	
+<!-- Cached 20190921194703 -->
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./PS3_seeds_files/saved_resource(2).html"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_2499109283477" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./PS3_seeds_files/saved_resource(3).html"></iframe><div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body><iframe id="google_esf" name="google_esf" src="./PS3_seeds_files/zrt_lookup.html" data-ad-client="ca-pub-3613141703597295" style="display: none;"></iframe></html>
