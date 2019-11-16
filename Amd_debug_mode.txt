@@ -1,1 +1,275 @@
 Key: asm: MOV EDI, 0x9C5A203A
+
+
+Super-secret debug capabilities of AMD processors !
+Item name:	Super-secret debug capabilities of AMD processors !	
+Currently0/512345
+Rating: 0.0 (0 votes)
+Author:	Czernobyl aka Czerno                        
+Home URL:	http://www.czerno.tk/
+Last updated:	June 12, 2014
+Version (if appl.):	1.0
+Direct D/L link:	N/A
+Description:	Secret debugging extensions in AMD K7 processors
+************************************************
+Here unveiled by Czerno - Mail : <me AT czerno.tk>
+Original article : December, 2010. This revision : June, 2014.
+Reason for revision : contents made more accurate, shorter and hopefully, clearer.
+
+Copyleft (c) Czerno. Please keep attribution where it belongs.
+
+The author shall not be held responsible for any errors or inaccuracies, blah-blah...
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+Click the "more details" button or link downpage to view additional notes!
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+Very important : you can help! Yes, YOU!
+
+- By doing your own trial of the features and contacting us over any errors/inaccuracies/complements you find!
+We want to assert, in particular, whether the features we found in Athlon-XP are present, possibly modified, in the newer generations of AMD CPUs.
+- By updating debuggers, plugins and toolz so they can make full use of the new features.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+_Summary_ :
+
+AMD K7 (Athlon-XP, etc.) processors have included some firmware-based debugging features that expand beyond standard, architecturally defined capabilities of X86. For some reason though, AMD has been tightly secretive about these features; their existence was first inferred by us after considering a list of undocumented MSRs found on CBID's page (URL, cf. notes below).
+
+Herein we uncover the outcome of our experiments, in the hope it may be useful to software developers, & possibly included in future debuggers, debugger plug-ins or other tools.
+
+I call the new capabilities "expanded", since the term "debug extensions" is already used to refer to other features in Pentium and later processors.
+
+Author can be contacted by email, or PM, or on the reversing forum.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+_New MSRs_ :
+
+Four undocumented machine specific registers (MSR) are involved in the expanded
+debug facilities. These MSRs are "password" protected against casual access :
+read/write access (RDMSR/WRMSR) to the registers is granted only if EDI holds
+the correct password value, viz. EDI=9C5A203A. Otherwise, GPF exception occurs.
+
+_Control_ @ C001_1024 , useful width: 8 bits
+_Data_Match_ @ C001_1025 , width: 32
+_Data_Mask_ @ C001_1026 , width: 32
+_Address_Mask_ @ C001_1027 , width: 12 bits.
+
+All four registers are zeroed upon processor reset.
+
+Security considerations : As the features are controlled by MSRs whose access is restricted to code executed in "ring zero", their existence is generally not considered a security risk. However a malicious BIOS or OS driver could certainly make creative use of the features with some disturbing consequences against nsuspecting users.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+Let's examine the _Control Register_ first :
+
+According to the "BIOS and Kernel developer's guide" for AMD NPT Family Fh, bit 7
+of this register enables an external "hardware debug tool" connected to our processor using the JTAG bus. Such (expensive, professional) tool is not considered herein.
+
+The BIOS guide further says bits 6-0 are "reserved, should be zero".
+We found that on the K7 (Athlon XP), we can put bits 1-0 to good use, as explained
+below ; we have not found any effect for bits 6-2, consequently we left them aside.
+
+We shall henceforth be discussing the use of undocumented bits 1-0 of the Control register, leaving all other bits null.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+_Operational details_
+
+The operation of breakpoint *BP0* (using DR0) is enhanced as will be described.
+Breakpoints BP1 to BP3 are _not_ affected.
+
+Breakpoint *BP0* _is_ modified, being further conditionned by the contents of the new MSRs in addition to legacy DR7. The features *cannot be switched off* : as soon as the address in DR0 is validated by setting DR7 bits 0 and/or 1, it behaves as will be explained, there is no further enabling bit.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+1) The Mask MSRs :
+
+The "Address_Mask" qualifies the Address in DR0, while "Data_Mask" qualifies the "Data_Match" MSR.
+
+In both masks, bits which are _set_ (=1) mean "don't care", don't look at the
+corresponding bit when doing compares.
+
+A mask value of all zeroes thus is asking for exact match.
+Conversely, with a data mask of all ones, comparisons will always succeed.
+
+The Address_Mask _should_ be a string of zeroes terminated by (zero or more) ones,
+in other words a power of two minus one.
+
+Address_Mask is only twelve bits wide, hence the largest allowable address mask : 00000FFF, matches 4096 page-aligned, consecutive memory (or I/O port) addresses.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+2) The Address_Mask:
+
+It is used *unconditionally* for all three types of BP : instruction execution,
+memory or IO data access.
+
+A null mask, which is the default, in effect switches address expansion off, mimicking legacy breakpoint behavior.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+3) Instruction breakpoints (DR7 type =0):
+
+Are triggered by instruction execution at _any_ address matching DR0 under Address_Mask.
+
+Control_ MSR has no effect (should be zero).
+Data_Match and Data_Mask are not used for this type of breakpoints.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+4) Memory & I/O Data breakpoint (DR7 types 1,3 and 2):
+
+The Addres_mask is applied to DR0 address, for monitoring 1 up to 4096 consecutive bytes.
+
+- Case: *Control = 0* (legacy), no additional check is performed. For memory access, Break occurs either on Write only, or on All_Access, selected by the legacy breakpoint "type" bits in DR7 (bite 17-16).
+Data_Match and data_mask not used (should be zero).
+
+
+- For the next three cases, Data compare is always done : to in effect disable it, one must use a Data_Mask of all ones (meaning : don't care).
+
+- Case: *Control = 2* : Breaks occur on WRITE/OUT only. Even if the DR7 type is RW,
+breaks never happen on Read. Traps on Data_Match.
+
+- Case *control = 3* : same as Control = 2 , except the data condition is reversed,
+i.e. Traps on Data_NON_Match.
+
+- Case: *Control = 1* : break on Data_Match, on WRITE/OUT only, at ANY address!
+Thus Address (DR0) and Address_Mask are ignored in this case (should be zero).
+
+Reminder: I/O breakpoints require CR4 bit 3 (DE) set.
+
+°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+Knowledge wants to be free !
+Related URLs:	
+Forum thread where these hidden debug features were first revealed and explored:
+http://www.woodmann.com/forum/showthread.php?13891-AMD-processors-quot-undocumented-quot-debugging-features-and-MSRs-%28DbgCtlMSR2-amp-al.%29
+A list of AMD undocumented Machine Specific Registers:
+http://cbid.softnology.biz/html/undocmsrs.html
+Slashdot discussion about this:
+http://hardware.slashdot.org/story/10/11/12/047243/Hidden-Debug-Mode-Found-In-AMD-Processors
+AMD public relations - comments at eWeek Europe:
+http://www.eweekeurope.co.uk/news/amd-denies-cpu-debugger-was-a-secret-13759
+J00ru's GUI app for easy display / modification of the hidden registers on Windows:
+http://www.woodmann.com/collaborative/tools/index.php/AMD_dbg
+
+RSS feed Feed containing all updates for this item.
+
+Here below you will find useful notes about this tool, left by other users.
+
+You are welcome to add your own useful notes here, or edit any existing notes to improve or extend them.
+
+Feature orthogonality...
+
+When defining processor features, orthogonality is always desirable,although it may sometimes conflict with other design goals.
+
+While rev-engineering unknown / undocumented features, orthogonality is even more desirable, often allowing us to successfully guess our way to the solution.
+
+Unfortunately the individual features of AMD's expanded debug don't satisfy the orthogonality criterium, making the Reverser's road the more uneasy !
+
+More concretely said, it would be nice if every Control_MSR bit were controlling some independent feature (for instance, some bit might turn Address masking on or off, another bit would Data masking, and so on...) but turns out it is not so. There is some degree of orthogonality in the design, for an example cf. cases Ctl=2,3,8,9 for expanded IO breakpoints : one would be glad to conclude that "bit 0" means "reverse the condition on data compare", unfortunately this interpretation does not hold any more if you consider the cases : Ctl=0 vs. Ctl=1.
+
+However, some cases of apparent unorthogonality might stem from incomplete implementation of projected features : by setting Ctl=8 or 9, I/O breakpoints can be defined to trigger on READs only (+data and address matching), whereas MEMORY data BPs do not have the corresponding possibility (on my test processor at least, Ctl=8/9 for data BPs act the same as Ctl=0/1, i.e. bit 3 has no effect.)
+
+It would be desirable to have Memory DATA BPS that fire only on READs. Maybe on newer AMD processors that also is possible ? Can you check it, and other unknown cases too, helping yourself of the principle of orthogonality in the measure that it applies ? Your comments are welcome! -- Czerno on Dec 1st, 2010
+
+
+
+If you find that any information for the item above is missing, outdated or incorrect, please edit it!
+(please also edit it if you think it fits well in some additional category, since this can also be controlled)
+
+Parent Category: X86 Internals Articles
+
+66.249.85.6 talk for this ip log in
+category navigation tree
+RCE Knowledge
+   Categorized by Knowledge Area  (182)
+   Anti Reversing Techniques  (12)
+   Malware Analysis Specific  (37)
+   Protection Technique Specific  (9)
+   Reversing Technique Info  (19)
+   System Internals  (44)
+   System Internals Articles  (33)
+   Windows Internals Articles  (6)
+   Linux Internals Articles  (15)
+   Mac OS Internals Articles  (9)
+   Mobile Platform Internals Articles  (1)
+   OS Independent Internals Articles  (2)
+   .NET Internals Articles
+   Flash Internals Articles
+   Java Internals Articles
+   X64 Internals Articles
+   X86 Internals Articles  (2)
+   System Internals Crackmes
+   System Internals Tidbits  (1)
+   System Internals Tutorials  (10)
+   Tool Info  (33)
+   Unpacking  (28)
+   Categorized by Knowledge Type  (182)
+   Articles  (104)
+   Anti Reversing Articles  (11)
+   Malware Analysis Articles  (29)
+   Protection Technique Specific Articles  (4)
+   Reversing Technique Articles  (5)
+   System Internals Articles  (33)
+   Windows Internals Articles  (6)
+   Linux Internals Articles  (15)
+   Mac OS Internals Articles  (9)
+   Mobile Platform Internals Articles  (1)
+   OS Independent Internals Articles  (2)
+   .NET Internals Articles
+   Flash Internals Articles
+   Java Internals Articles
+   X64 Internals Articles
+   X86 Internals Articles  (2)
+   Tool Articles  (11)
+   Unpacking Articles  (11)
+   Crackmes  (5)
+   Tidbits  (6)
+   Tutorials  (67)
+   Categorized by Platform  (182)
+   Windows  (82)
+   Linux  (41)
+   Mac OS  (22)
+   Mobile Platforms  (7)
+   OS Independent  (30)
+   OS Independent Anti Reversing Techniques  (2)
+   OS Independent Internals  (5)
+   OS Independent Internals Articles  (2)
+   .NET Internals Articles
+   Flash Internals Articles
+   Java Internals Articles
+   X64 Internals Articles
+   X86 Internals Articles  (2)
+   OS Independent Internals Crackmes
+   OS Independent Internals Tidbits  (1)
+   OS Independent Internals Tutorials  (2)
+   OS Independent Malware Analysis Specific  (7)
+   OS Independent Protection Technique Specific  (3)
+   OS Independent Reversing Technique Info  (9)
+   OS Independent Tool Info  (3)
+   OS Independent Unpacking  (1)
+   Tools
+   Needs New Category
+search
+Custom Search
+ 
+
+Full Library Index
+Most Recent Updates
+
+Also visit:
+Our other separate library for
+reverse engineering tools
+and our
+RCE forums and blogs!
+This page was last modified 10:35, 20 June 2014. This page has been accessed 92,423 times.
+
+Did someone submit false information, spam, or otherwise vandalize this page? In that case please click here to report it!
+
+Do you have any feedback about the site, or want to discuss something about it with other users or admins? In that case click here!
+
