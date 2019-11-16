@@ -1,0 +1,1 @@
+Key: asm: MOV EDI, 0x9C5A203A
