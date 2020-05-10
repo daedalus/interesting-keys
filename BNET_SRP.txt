@@ -1,0 +1,5 @@
+g = 0x2F
+N = 0xF8FF1A8B619918032186B68CA092B5557E976C78C73212D91216F6658523C787
+
+x = reverse_bytes( sha1(salt, sha1(upper(username),":", upper(password))) )
+verifier = reverse_bytes(g^x % N)
