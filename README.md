@@ -1,4 +1,4 @@
 # interesting-keys
-Interesting collected (leaked) encryption/decryption keys 
+Interesting collected (leaked and already in public domain) encryption/decryption keys 
 
 Any contribution is welcome
