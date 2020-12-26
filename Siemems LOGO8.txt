@@ -1,0 +1,9 @@
+User: LSCUser
+Password: S3cret1
+User: AppUser
+Password: S3cret2
+User: WebUser
+Password: S3cret3
+User: TDUser
+Password: S3cret4
+Program password: SECRET
