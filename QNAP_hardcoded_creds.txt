@@ -1,0 +1,8 @@
+pwd_plain": "walter" 
+"admin_pwd": "walter" 
+NAS_PWD=walter 
+SERVER_PLAIN_PWD=walter 
+enc_pwd = 'RWxKZEJRUUk=' # enc 'walter" then b64 
+'enc_pwd': 'VAEC' # --> 'walter' --> fw ecrypted 
+'enc_pwd': 'ElJdBQQI' # --> 'walter' --> fw decrypted 
+"name": "waltershao"
