@@ -1,0 +1,4 @@
+"Dump_MotGSM.dll":{
+ "key":"0e282e124bb8af53357f7e8cb3460a23c94def3fe4f181a57c9fcba3f5f7f054",# Key and IV already public information
+ "iv":"888c609edc9eb9dfb4d30dfebc9f0431"      # https://github.com/cellebrited/cellebrite
+ }
