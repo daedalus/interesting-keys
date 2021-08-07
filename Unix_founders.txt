@@ -1,0 +1,41 @@
+Source: https://thehackernews.com/2019/10/unix-bsd-password-cracked.html
+
+Ken Thompson, co-inventor of Unix
+Hashed → ZghOT0eRm4U9s
+Plaintext → p/q2-q4!
+Dennis Ritchie, co-inventor of BSD and creator of the C programming language
+Hashed → gfVwhuAMF0Trw
+Plaintext → dmac
+Brian W. Kernighan, Canadian computer scientist and Unix contributor
+Hashed → ymVglQZjbWYDE:
+Plaintext → /.,/.,
+Stephen R. Bourne, creator of the Bourne shell command line interpreter
+Hashed → c8UdIntIZCUIA
+Plaintext → bourne
+Eric Schmidt, an early developer of Unix software and Former Google CEO:
+Hashed → FH83PFo4z55cU
+Plaintext → wendy!!!
+Stuart Feldman, author of Unix automation tool make and the first Fortran compiler
+Hashed → IIVxQSvq1V9R2
+Plaintext → axolotl
+Here's a list of cracked passwords belonging to other computer science pioneers:
+Person	Username	Hashes	Plaintext password
+Mark Horton	mark	Pb1AmSpsVPG0Y	uio
+Kirk McKusick	mckusick	AAZk9Aj5/Ue0E	foobar
+Richard Fateman	fateman	E9i8fWghn1p/I	apr1744
+Runs a program, not a login shell	network	9EZLtSYjeEABE	network
+UNIX-to-UNIX Copy	uucp	P0CHBwE/mB51k	whatnot
+Peter Kessler	peter	Nc3IkFJyW2u7E	...hello
+Kurt Shoens	kurt	olqH1vDqH38aw	sacristy
+John Foderaro	jkf	9ULn5cWTc0b9E	sherril.
+Peter J. Weinberger	pjw	N33.MCNcTh5Qw	uucpuucp
+Ernie Co-vax	root	OVCPatZ8RFmFY	cowperso
+John Reiser	jfr	X.ZNnZrciWauE	5%ghj
+Steve Johnson	scj	IL2bmGECQJgbk	pdq;dq
+Bob Kridle	kridle	4BkcEieEtjWXI	jilland1
+Keith Sklower	sklower	8PYh/dUBQT9Ss	theik!!!
+Robert Henry	henry	lj1vXnxTAPnDc	sn74193n
+Howard Katseff	hpk	9ycwM8mmmcp4Q	graduat;
+Özalp Babaoğlu	ozalp	m5syt3.lB5LAE	12ucdort
+Bob Fabry	fabry	d9B17PTU2RTlM	561cml..
+Tom London	tbl	cBWEbG59spEmM	..pnn521
