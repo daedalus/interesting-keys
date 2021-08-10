@@ -336,3 +336,11 @@ D0B69DD3DD6262E9438DCC2696CFE64B
 260858584AB8D71C629CD421EC666059
 
 Exponent = 0x10001
+
+Jedi master key:
+
+Key: 9B03D4FB5FEC1A2373462C45E4BC72A6
+
+This key decrypts dualshock4 firmwares. Algorithm is AES-128-CBC. 
+
+Zeroed IV. https://t.co/ZWPCJVqpv2
